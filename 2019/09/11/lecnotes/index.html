@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSE301,">
 
 
 
@@ -99,16 +99,26 @@
 
 
 
-<meta name="description" content="Fat Otaku">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Lingyun.Chen">
-<meta property="og:url" content="https://yukinooo7.github.io/lynChen.github.io/index.html">
+<meta name="description" content="Lecture notes on Tuesday 11th September 2019Supervised learning model: Perceptron（感知器）">
+<meta name="keywords" content="CSE301">
+<meta property="og:type" content="article">
+<meta property="og:title" content="20190910-301">
+<meta property="og:url" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/index.html">
 <meta property="og:site_name" content="Lingyun.Chen">
-<meta property="og:description" content="Fat Otaku">
+<meta property="og:description" content="Lecture notes on Tuesday 11th September 2019Supervised learning model: Perceptron（感知器）">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/ANN_pattern.png">
+<meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/Perceptron.png">
+<meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/Sj.png">
+<meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/Sj.png">
+<meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/Xj.png">
+<meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/ej.png">
+<meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/ej.png">
+<meta property="og:updated_time" content="2019-09-11T05:30:38.125Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lingyun.Chen">
-<meta name="twitter:description" content="Fat Otaku">
+<meta name="twitter:title" content="20190910-301">
+<meta name="twitter:description" content="Lecture notes on Tuesday 11th September 2019Supervised learning model: Perceptron（感知器）">
+<meta name="twitter:image" content="https://yukinooo7.github.io/images/20190910_301/ANN_pattern.png">
 
 
 
@@ -139,13 +149,13 @@
 
 
 
-  <link rel="canonical" href="https://yukinooo7.github.io/lynChen.github.io/">
+  <link rel="canonical" href="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/">
 
 
 
 
 
-  <title>Lingyun.Chen - Lecture Notes</title>
+  <title>20190910-301 | Lingyun.Chen</title>
   
 
 
@@ -164,8 +174,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/Yukinooo7/yukino.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5     157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -268,9 +277,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -300,9 +309,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/lynChen.github.io/2019/09/11/lecnotes/" itemprop="url">20190910-301</a></h1>
+          <h1 class="post-title" itemprop="name headline">20190910-301</h1>
         
 
         <div class="post-meta">
@@ -406,192 +413,68 @@
       
 
       
-        
-        
-          <p>Lecture notes on Tuesday 11th September 2019<br><strong>Supervised learning model: Perceptron（感知器）</strong></p>
-          
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/lynChen.github.io/2019/09/11/lecnotes/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-    <div>
-      
-    </div>
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yukinooo7.github.io/lynChen.github.io/lynChen.github.io/2019/09/10/lecnotes/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Lingyun">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/lynChen.github.io/images/gaomu.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Lingyun.Chen">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/lynChen.github.io/2019/09/10/lecnotes/" itemprop="url">307 Lecture 4 Notes</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-10T21:34:13+08:00">
-                2019-09-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/lynChen.github.io/categories/Lecture-Notes/" itemprop="url" rel="index">
-                    <span itemprop="name">Lecture Notes</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  53
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  1
-                </span>
-              
-            </div>
-          
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-        
-          
-            <p>SAMPLE</p>
+        <p>Lecture notes on Tuesday 11th September 2019<br><strong>Supervised learning model: Perceptron（感知器）</strong></p>
+<a id="more"></a>
+<h1 id="Supervised-vs-unsupervised-Learning"><a href="#Supervised-vs-unsupervised-Learning" class="headerlink" title="Supervised vs. unsupervised Learning"></a>Supervised vs. unsupervised Learning</h1><h2 id="Supervised-Learning"><a href="#Supervised-Learning" class="headerlink" title="Supervised Learning:"></a>Supervised Learning:</h2><p>classification is seen as supervised learing from examples.</p>
+<ol>
+<li>Supervision: The data (observations, measurements, etc.) are labeled with predefined classes. It is like that a “teacher” gives the classes (supervision)</li>
+<li>Testing data are classified into these classes too.</li>
+</ol>
+<h2 id="Unsupervised-learning-e-g-clustering"><a href="#Unsupervised-learning-e-g-clustering" class="headerlink" title="Unsupervised learning (e.g. clustering)"></a>Unsupervised learning (e.g. clustering)</h2><ol>
+<li>Class labels of the data are unknown</li>
+<li>Given a set of data, the task is to establish the existence of classes or clusters inthe data</li>
+</ol>
+<hr>
+<h1 id="Supervised-learning-process-two-steps"><a href="#Supervised-learning-process-two-steps" class="headerlink" title="Supervised learning process: two steps"></a>Supervised learning process: two steps</h1><ol>
+<li>Learning (training): Learn a model using the training data</li>
+<li>Testing: Test the model using unseeen test data to assess the model accuracy</li>
+</ol>
+<p><strong>Accuracy = Number of correct classification / Total number of test cases</strong></p>
+<ol>
+<li><p>Step 1: Training<br> Training data → Learning algorithm → Model</p>
+</li>
+<li><p>Step 2: Testing<br> Model → Test data → Accuracy</p>
+</li>
+</ol>
+<h1 id="What-do-we-mean-by-learning？"><a href="#What-do-we-mean-by-learning？" class="headerlink" title="What do we mean by learning？"></a>What do we mean by learning？</h1><p>Given:<br>    1. a data set D<br>    2. a task T<br>    3. a performance measure M<br>A computer system is said to learn from D to perform the task T if after the system’s performance on T improves as measured by M.</p>
+<p>In other words, the learned model helps the system to <strong>perform T better</strong> as compared to no learning</p>
+<h1 id="Fundamental-assumption-of-learning"><a href="#Fundamental-assumption-of-learning" class="headerlink" title="Fundamental assumption of learning"></a>Fundamental assumption of learning</h1><p><strong>Assumption: The distribution of training examples is identical to the distribution of test examples (include future unseen examples).</strong></p>
+<ol>
+<li>In practice, this assumption is often violated to certain degree.</li>
+<li>Strong violations will clearly result in poor classification accuracy.</li>
+<li>To achieve good accuracy on the test data, training examples must be sufficiently representative of the test data</li>
+</ol>
+<h1 id="Perceptron-1958"><a href="#Perceptron-1958" class="headerlink" title="Perceptron 1958"></a>Perceptron 1958</h1><p>Perceptrons are neural networks that change with “experience” using <strong>error-correcting rule</strong></p>
+<p>According to the rule, weight of a response unit changes when it makes erroneous reponse to stimuli presented to the networks</p>
+<h1 id="ANN-for-Pattern-Recognition"><a href="#ANN-for-Pattern-Recognition" class="headerlink" title="ANN for Pattern Recognition"></a>ANN for Pattern Recognition</h1><ol>
+<li>Training data: set of sample pairs (x,y)</li>
+<li>Networks (model, classifier) <strong>adjusts its connection weights accoring to the errors</strong> between target and network output<br><img src="/images/20190910_301/ANN_pattern.png" alt></li>
+</ol>
+<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p><img src="/images/20190910_301/Perceptron.png" alt><br>The simplest architecture of perceptron comprises two layers of idealised neurons, which we shall call “units” of the network</p>
+<p>There are<br>    1. one layer of input units, and<br>    2. one layer of output units<br>in the perceptron</p>
+<p>The two layers are fully interconnected, i.e., every input unit is connected to every output unit.</p>
+<p>Thus, processing elements of the perceptron are the abstract neurons.</p>
+<p>Each processing element has the same input comprising total input layer, but individual outputs with individual connections and therefore weights of connections.</p>
+<p>The total input to the output unit j is<br><img src="/images/20190910_301/Sj.png" alt></p>
+<p>a i : input value from the ith input unit<br>w ji : the weight of connection btw i-th and j-th output units</p>
+<p>The sum of taken over all n + 1 inputs units connected to the output unit j.</p>
+<p>There is special bias input unit number 0 in the input layer. <strong>i=0</strong></p>
+<p>The bias unit always produces inputs a0 of the fixed values of +1.</p>
+<p>The input a0 of bias unit functions as a constant value in the sum.</p>
+<p>The bias unit connection to output unit j has a weight wj0 adjusted in the same way as all the other weights.</p>
+<p>The output value Xj of the output unit j depends on whether the weighted sum is above or below the unit’s threshold value.</p>
+<p>Xj is defined by the unit’s threshold activation function.<br>Xj = f(Sj) ={1, Sj>=θj; 0, j<θj}< p>
+<p><strong>Definition</strong><br>The ordered set of instant outputs of all units in the output layer X = {X0,X1…,Xn} constitues an output vector of the network</p>
+<p>The instant output Xj of the j-th unit in the output layer constitues the j-th component of the output vector.</p>
+<p>Weight wji of connections between the two layers are changed accoring to perceptron learning rule, so the network is more likely to produce the desired outut in response to certain inputs.</p>
+<p><strong>The process of weights adjustment is called perceptron learning (or training).</strong></p>
+<h1 id="Perceptron-Training"><a href="#Perceptron-Training" class="headerlink" title="Perceptron Training"></a>Perceptron Training</h1><p>Every processing element computes an output according its state and threshold:<br><img src="/images/20190910_301/Sj.png" alt><br>The networ instant outputs Xj are then compared to the desired outputs specified in the training set.<br><img src="/images/20190910_301/Xj.png" alt><br>The error of an output unit is the difference between the target output and the instant one.<br><img src="/images/20190910_301/ej.png" alt></p>
+<p><strong>The error are computed and used to re-adjust the values of the weights of connections.</strong></p>
+<h1 id="Perceptron-Updating-of-the-Weights"><a href="#Perceptron-Updating-of-the-Weights" class="headerlink" title="Perceptron Updating of the Weights"></a>Perceptron Updating of the Weights</h1><p>The goal of the training session is to arrive at a single set of weights that allow each of the mappings in the training set to be done successfully by the network.</p>
+<h2 id="Compute-error-of-every-output-unit"><a href="#Compute-error-of-every-output-unit" class="headerlink" title="Compute error of every output unit"></a>Compute error of every output unit</h2><p><img src="/images/20190910_301/ej.png" alt><br>where tj is the target value for output unit j<br>Xj is the instant output produed by output unit j</p>
+<h2 id="Update-the-weights"><a href="#Update-the-weights" class="headerlink" title="Update the weights"></a>Update the weights</h2><p>Wji = Wji + ∆Wji<br>where ∆Wji = Ce j a i = C(t j - X j)a i</p>
+<h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>A sequential learning procedure for updating the weights.</p>
+<p>Perceptron training algorithm (delta rule)<br>∆w = learning rate x (teacher - output) x input<br>                            error</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -611,10 +494,8 @@
             document.body.appendChild(img);
           });
       </script>
-          
-        
       
-    </div>
+    </θj}<></p></div>
     
     
     
@@ -626,17 +507,45 @@
     
     <div>
       
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------<i class="fa fa-battery-quarter"></i>  End of this note-------------</div>
+    
+</div>
+      
     </div>
     <footer class="post-footer">
       
-
+        <div class="post-tags">
+          
+            <a href="/lynChen.github.io/tags/CSE301/" rel="tag"><i class="fa fa-tag"></i> CSE301</a>
+          
+        </div>
       
 
       
+      
+      
 
       
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/lynChen.github.io/2019/09/10/lecnotes/" rel="next" title="307 Lecture 4 Notes">
+                <i class="fa fa-chevron-left"></i> 307 Lecture 4 Notes
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
       
-        <div class="post-eof"></div>
+
+      
       
     </footer>
   </div>
@@ -646,10 +555,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -657,6 +567,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -677,8 +591,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -762,6 +685,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Supervised-vs-unsupervised-Learning"><span class="nav-number">1.</span> <span class="nav-text">Supervised vs. unsupervised Learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Supervised-Learning"><span class="nav-number">1.1.</span> <span class="nav-text">Supervised Learning:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Unsupervised-learning-e-g-clustering"><span class="nav-number">1.2.</span> <span class="nav-text">Unsupervised learning (e.g. clustering)</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Supervised-learning-process-two-steps"><span class="nav-number">2.</span> <span class="nav-text">Supervised learning process: two steps</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#What-do-we-mean-by-learning？"><span class="nav-number">3.</span> <span class="nav-text">What do we mean by learning？</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fundamental-assumption-of-learning"><span class="nav-number">4.</span> <span class="nav-text">Fundamental assumption of learning</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-1958"><span class="nav-number">5.</span> <span class="nav-text">Perceptron 1958</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#ANN-for-Pattern-Recognition"><span class="nav-number">6.</span> <span class="nav-text">ANN for Pattern Recognition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Model"><span class="nav-number">7.</span> <span class="nav-text">Model</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Training"><span class="nav-number">8.</span> <span class="nav-text">Perceptron Training</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Updating-of-the-Weights"><span class="nav-number">9.</span> <span class="nav-text">Perceptron Updating of the Weights</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Compute-error-of-every-output-unit"><span class="nav-number">9.1.</span> <span class="nav-text">Compute error of every output unit</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Update-the-weights"><span class="nav-number">9.2.</span> <span class="nav-text">Update the weights</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Conclusion"><span class="nav-number">9.3.</span> <span class="nav-text">Conclusion</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -910,6 +849,10 @@
 
 
   
+  <script type="text/javascript" src="/lynChen.github.io/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/lynChen.github.io/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
