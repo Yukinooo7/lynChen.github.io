@@ -107,18 +107,18 @@
 <meta property="og:site_name" content="Lingyun.Chen">
 <meta property="og:description" content="Lecture notes on Tuesday 11th September 2019Supervised learning model: Perceptron（感知器）">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://yukinooo7.github.io/source/images/20190910_301/ANN_pattern.png">
-<meta property="og:image" content="https://yukinooo7.github.io/source/images/20190910_301/Perceptron.png">
-<meta property="og:image" content="https://yukinooo7.github.io/source/images/20190910_301/Sj.png">
-<meta property="og:image" content="https://yukinooo7.github.io/source/images/20190910_301/Sj.png">
-<meta property="og:image" content="https://yukinooo7.github.io/source/images/20190910_301/Xj.png">
-<meta property="og:image" content="https://yukinooo7.github.io/source/images/20190910_301/ej.png">
-<meta property="og:image" content="https://yukinooo7.github.io/source/images/20190910_301/ej.png">
-<meta property="og:updated_time" content="2019-09-11T05:40:29.097Z">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/ANN_pattern.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/Perceptron.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/Sj.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/Sj.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/Xj.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/ej.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/ej.png">
+<meta property="og:updated_time" content="2019-09-11T05:48:23.564Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190910-301">
 <meta name="twitter:description" content="Lecture notes on Tuesday 11th September 2019Supervised learning model: Perceptron（感知器）">
-<meta name="twitter:image" content="https://yukinooo7.github.io/source/images/20190910_301/ANN_pattern.png">
+<meta name="twitter:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/11/lecnotes/ANN_pattern.png">
 
 
 
@@ -448,14 +448,14 @@
 <p>According to the rule, weight of a response unit changes when it makes erroneous reponse to stimuli presented to the networks</p>
 <h1 id="ANN-for-Pattern-Recognition"><a href="#ANN-for-Pattern-Recognition" class="headerlink" title="ANN for Pattern Recognition"></a>ANN for Pattern Recognition</h1><ol>
 <li>Training data: set of sample pairs (x,y)</li>
-<li>Networks (model, classifier) <strong>adjusts its connection weights accoring to the errors</strong> between target and network output<br><img src="/source/images/20190910_301/ANN_pattern.png" alt></li>
+<li>Networks (model, classifier) <strong>adjusts its connection weights accoring to the errors</strong> between target and network output<br><img src="ANN_pattern.png" alt></li>
 </ol>
-<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p><img src="/source/images/20190910_301/Perceptron.png" alt><br>The simplest architecture of perceptron comprises two layers of idealised neurons, which we shall call “units” of the network</p>
+<h1 id="Model"><a href="#Model" class="headerlink" title="Model"></a>Model</h1><p><img src="Perceptron.png" alt><br>The simplest architecture of perceptron comprises two layers of idealised neurons, which we shall call “units” of the network</p>
 <p>There are<br>    1. one layer of input units, and<br>    2. one layer of output units<br>in the perceptron</p>
 <p>The two layers are fully interconnected, i.e., every input unit is connected to every output unit.</p>
 <p>Thus, processing elements of the perceptron are the abstract neurons.</p>
 <p>Each processing element has the same input comprising total input layer, but individual outputs with individual connections and therefore weights of connections.</p>
-<p>The total input to the output unit j is<br><img src="/source/images/20190910_301/Sj.png" alt></p>
+<p>The total input to the output unit j is<br><img src="Sj.png" alt></p>
 <p>a i : input value from the ith input unit<br>w ji : the weight of connection btw i-th and j-th output units</p>
 <p>The sum of taken over all n + 1 inputs units connected to the output unit j.</p>
 <p>There is special bias input unit number 0 in the input layer. <strong>i=0</strong></p>
@@ -468,10 +468,10 @@
 <p>The instant output Xj of the j-th unit in the output layer constitues the j-th component of the output vector.</p>
 <p>Weight wji of connections between the two layers are changed accoring to perceptron learning rule, so the network is more likely to produce the desired outut in response to certain inputs.</p>
 <p><strong>The process of weights adjustment is called perceptron learning (or training).</strong></p>
-<h1 id="Perceptron-Training"><a href="#Perceptron-Training" class="headerlink" title="Perceptron Training"></a>Perceptron Training</h1><p>Every processing element computes an output according its state and threshold:<br><img src="/source/images/20190910_301/Sj.png" alt><br>The networ instant outputs Xj are then compared to the desired outputs specified in the training set.<br><img src="/source/images/20190910_301/Xj.png" alt><br>The error of an output unit is the difference between the target output and the instant one.<br><img src="/source/images/20190910_301/ej.png" alt></p>
+<h1 id="Perceptron-Training"><a href="#Perceptron-Training" class="headerlink" title="Perceptron Training"></a>Perceptron Training</h1><p>Every processing element computes an output according its state and threshold:<br><img src="Sj.png" alt><br>The networ instant outputs Xj are then compared to the desired outputs specified in the training set.<br><img src="Xj.png" alt><br>The error of an output unit is the difference between the target output and the instant one.<br><img src="ej.png" alt></p>
 <p><strong>The error are computed and used to re-adjust the values of the weights of connections.</strong></p>
 <h1 id="Perceptron-Updating-of-the-Weights"><a href="#Perceptron-Updating-of-the-Weights" class="headerlink" title="Perceptron Updating of the Weights"></a>Perceptron Updating of the Weights</h1><p>The goal of the training session is to arrive at a single set of weights that allow each of the mappings in the training set to be done successfully by the network.</p>
-<h2 id="Compute-error-of-every-output-unit"><a href="#Compute-error-of-every-output-unit" class="headerlink" title="Compute error of every output unit"></a>Compute error of every output unit</h2><p><img src="/source/images/20190910_301/ej.png" alt><br>where tj is the target value for output unit j<br>Xj is the instant output produed by output unit j</p>
+<h2 id="Compute-error-of-every-output-unit"><a href="#Compute-error-of-every-output-unit" class="headerlink" title="Compute error of every output unit"></a>Compute error of every output unit</h2><p><img src="ej.png" alt><br>where tj is the target value for output unit j<br>Xj is the instant output produed by output unit j</p>
 <h2 id="Update-the-weights"><a href="#Update-the-weights" class="headerlink" title="Update the weights"></a>Update the weights</h2><p>Wji = Wji + ∆Wji<br>where ∆Wji = Ce j a i = C(t j - X j)a i</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>A sequential learning procedure for updating the weights.</p>
 <p>Perceptron training algorithm (delta rule)<br>∆w = learning rate x (teacher - output) x input<br>                            error<br>Learning rate: we set that ourselves. Set large enough that learning happens in a reasonable amount of time; and also small enough to avoid too fase.<br>(teacher - output): The teacher knows the correct answer.<br>IF we get the categorization right, (teacher - output) will be zero. In other words, if we get it right, we wonts change any of the weights. As far as we know we have a good solution, why would we change it?</p>
