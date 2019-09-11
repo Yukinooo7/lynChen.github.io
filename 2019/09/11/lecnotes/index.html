@@ -114,7 +114,7 @@
 <meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/Xj.png">
 <meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/ej.png">
 <meta property="og:image" content="https://yukinooo7.github.io/images/20190910_301/ej.png">
-<meta property="og:updated_time" content="2019-09-11T05:30:38.125Z">
+<meta property="og:updated_time" content="2019-09-11T05:38:14.772Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190910-301">
 <meta name="twitter:description" content="Lecture notes on Tuesday 11th September 2019Supervised learning model: Perceptron（感知器）">
@@ -474,7 +474,13 @@
 <h2 id="Compute-error-of-every-output-unit"><a href="#Compute-error-of-every-output-unit" class="headerlink" title="Compute error of every output unit"></a>Compute error of every output unit</h2><p><img src="/images/20190910_301/ej.png" alt><br>where tj is the target value for output unit j<br>Xj is the instant output produed by output unit j</p>
 <h2 id="Update-the-weights"><a href="#Update-the-weights" class="headerlink" title="Update the weights"></a>Update the weights</h2><p>Wji = Wji + ∆Wji<br>where ∆Wji = Ce j a i = C(t j - X j)a i</p>
 <h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>A sequential learning procedure for updating the weights.</p>
-<p>Perceptron training algorithm (delta rule)<br>∆w = learning rate x (teacher - output) x input<br>                            error</p>
+<p>Perceptron training algorithm (delta rule)<br>∆w = learning rate x (teacher - output) x input<br>                            error<br>Learning rate: we set that ourselves. Set large enough that learning happens in a reasonable amount of time; and also small enough to avoid too fase.<br>(teacher - output): The teacher knows the correct answer.<br>IF we get the categorization right, (teacher - output) will be zero. In other words, if we get it right, we wonts change any of the weights. As far as we know we have a good solution, why would we change it?</p>
+<p>Let’s think about the delta rule:<br>(teacher - output)<br>If we get the categoration wrong, it will either be -1 or +1.</p>
+<p>For Input:</p>
+<ul>
+<li>If the node whose weight we’re adjusting sent in a 0, then it didnt participate in making the decision. In that case, it shouldn’t be adjusted. Multiplying by zero will make that happen.</li>
+<li>If the node whose weight we’re adjusting sent in a 1, then it did particapate and we should change the weight (up or down as needed) if the corresponding output wrong.</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
