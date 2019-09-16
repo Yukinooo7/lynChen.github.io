@@ -99,34 +99,50 @@
 
 
 
-<meta name="description" content="301 lecture notes">
+<meta name="description" content="Gradient Descent Rule">
 <meta name="keywords" content="CSE301">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20190916-301">
 <meta property="og:url" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/index.html">
 <meta property="og:site_name" content="Lingyun.Chen">
-<meta property="og:description" content="301 lecture notes">
+<meta property="og:description" content="Gradient Descent Rule">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GDR.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GDR.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GDR_1.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GDR_2.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GDR_3.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/moving_1.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/moving_2.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Illustation_1.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Illustation_2.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Illustation_3.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Illustation_4.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GDR_4.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/note_1.jpg">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/eq1.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/note_2.jpg">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GD_example_2.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GD_example_1.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/IGDrule_1.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/IGDrule_algorithm.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Sig_1.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Sigm_1.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/note_3.jpg">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Sigm_2.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Initialization.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Sigm_repeat.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Sigm_example_1.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Sigm_example_2.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/Initialization_1.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/IGD_repeat.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/error_surface.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/batch_1.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/incremental.png">
-<meta property="og:updated_time" content="2019-09-16T09:48:56.043Z">
+<meta property="og:updated_time" content="2019-09-16T13:03:32.771Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190916-301">
-<meta name="twitter:description" content="301 lecture notes">
+<meta name="twitter:description" content="Gradient Descent Rule">
 <meta name="twitter:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/16/lecnotes/GDR.png">
 
 
@@ -384,7 +400,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  449
+                  779
                 </span>
               
 
@@ -400,7 +416,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  4
                 </span>
               
             </div>
@@ -422,58 +438,92 @@
       
 
       
-        <p>301 lecture notes</p>
+        <p>Gradient Descent Rule</p>
 <a id="more"></a>
 
 <p>VERY IMPORTANT</p>
-<h1 id="The-Gradient-Descent-Rule"><a href="#The-Gradient-Descent-Rule" class="headerlink" title="The Gradient Descent Rule"></a>The Gradient Descent Rule</h1><h2 id="Use-gradient-descent-to-search-the-hypothesis-sapce"><a href="#Use-gradient-descent-to-search-the-hypothesis-sapce" class="headerlink" title="Use gradient descent to search the hypothesis sapce"></a>Use gradient descent to search the hypothesis sapce</h2><ul>
-<li><p>Perceptron rule cannot be used (not differentiable, it changes suddenly from 0 to 1, not continueous, differentiable can find value, maybe maximum or minimum)</p>
-</li>
-<li><p>Unthreshold linear unit (based on error) is an appropriate error measure:<br><img src="GDR.png" alt><br>Ye: t, Oe: e<br>1/2 balance the square<br>e for differentiable</p>
-<h2 id="Understand"><a href="#Understand" class="headerlink" title="Understand"></a>Understand</h2></li>
-<li><p>all possible weight vectors (depend on myself)</p>
-</li>
-<li><p>associated E values</p>
-</li>
+<h1 id="The-Gradient-Descent-Rule"><a href="#The-Gradient-Descent-Rule" class="headerlink" title="The Gradient Descent Rule"></a>The Gradient Descent Rule</h1><p>Perceptron rule fails if data is not linear separable</p>
+<h2 id="Use-gradient-descent-to-search-the-hypothesis-space"><a href="#Use-gradient-descent-to-search-the-hypothesis-space" class="headerlink" title="Use gradient descent to search the hypothesis space"></a>Use gradient descent to search the hypothesis space</h2><ul>
+<li>Perceptron rule cannot be used (not differentiable, it changes suddenly from 0 to 1, not continueous, differentiable can find value, maybe maximum or minimum)</li>
+<li>Hence, an unthreshold linear unit (based on error) is an appropriate error measure:<br><img src="GDR.png" alt><br>Ye: t, Oe: e<br>1/2 balance the square<br>e for differentiable</li>
 </ul>
-<h2 id="The-objective-is-to-minimze-the-following-errror"><a href="#The-objective-is-to-minimze-the-following-errror" class="headerlink" title="The objective is to minimze the following errror"></a>The objective is to minimze the following errror</h2><p>##<br><img src="GDR_1.png" alt></p>
-<p>##<br><img src="GDR_2.png" alt></p>
-<p>##<br><img src="GDR_3.png" alt><br>first wi is the new one<br>secodn wi is the old one</p>
-<h1 id="Error-Surface"><a href="#Error-Surface" class="headerlink" title="Error Surface"></a>Error Surface</h1><p>convex</p>
+<h2 id="Understand"><a href="#Understand" class="headerlink" title="Understand"></a>Understand</h2><ul>
+<li>all possible weight vectors (depend on myself)</li>
+<li>associated E values</li>
+</ul>
+<h2 id="The-objective-is-to-minimze-the-following-errror"><a href="#The-objective-is-to-minimze-the-following-errror" class="headerlink" title="The objective is to minimze the following errror"></a>The objective is to minimze the following errror</h2><p><img src="GDR.png" alt></p>
+<p>##<br><img src="GDR_1.png" alt></p>
+<h2 id="The-Training-is-a-process-of-minimizing-the-error-E-w-in-the-steepest-direction-most-rapid-decrease-this-is-in-direction-opposite-to-the-gradient"><a href="#The-Training-is-a-process-of-minimizing-the-error-E-w-in-the-steepest-direction-most-rapid-decrease-this-is-in-direction-opposite-to-the-gradient" class="headerlink" title="The Training is a process of minimizing the error E(w) in the steepest direction (most rapid decrease), this is in direction opposite to the gradient:"></a>The Training is a process of minimizing the error E(w) in the steepest direction (most rapid decrease), this is in direction opposite to the gradient:</h2><p><img src="GDR_2.png" alt></p>
+<p>It leads to the gradient descent training rule:<br><img src="GDR_3.png" alt><br>first wi is the new one<br>secodn wi is the old one</p>
+<h1 id="Error-Surface"><a href="#Error-Surface" class="headerlink" title="Error Surface"></a>Error Surface</h1><p>convex, error must be parabolic with a single global minimum</p>
 <ul>
 <li>global minimum: find a direction can try to reach a specific level which is global minimum value, if I reach this level, I reach the global minimum.</li>
 <li>But maybe just find a local minimum, so its important to choose direction.</li>
 </ul>
-<h2 id="Moving-downfill"><a href="#Moving-downfill" class="headerlink" title="Moving downfill"></a>Moving downfill</h2><p>try to decrease the error value<br><img src="moving_1.png" alt><br><img src="moving_2.png" alt><br>partial derivative to 0, move opposite to current value.</p>
-<h1 id="Illustration-of-Gradiet-Descent"><a href="#Illustration-of-Gradiet-Descent" class="headerlink" title="Illustration of Gradiet Descent"></a>Illustration of Gradiet Descent</h1><h1 id="Explain-GDR"><a href="#Explain-GDR" class="headerlink" title="Explain GDR"></a>Explain GDR</h1><p><img src="GDR_4.png" alt><br>y: target, which is a constant, not relative to w<br>o: weighted sum of input, relative to w<br>x: constant<br>so rewrite o in term of w,x<br>o is equal to corresponding WiXie<br>convert partial derivative to the weighted sum of input</p>
-<p>-Xie responding input<br><img src="note_1.jpg" alt><br>just to memorize the equation</p>
+<h2 id="Moving-downfill"><a href="#Moving-downfill" class="headerlink" title="Moving downfill"></a>Moving downfill</h2><p>Try to decrease the error value</p>
+<p><img src="moving_1.png" alt><br><img src="moving_2.png" alt><br>partial derivative to 0, move opposite to current value.</p>
+<h1 id="Illustration-of-Gradiet-Descent"><a href="#Illustration-of-Gradiet-Descent" class="headerlink" title="Illustration of Gradiet Descent"></a>Illustration of Gradiet Descent</h1><p><img src="Illustation_1.png" alt><br><img src="Illustation_2.png" alt><br><img src="Illustation_3.png" alt><br><img src="Illustation_4.png" alt></p>
+<h1 id="Explain-GDR"><a href="#Explain-GDR" class="headerlink" title="Explain GDR"></a>Explain GDR</h1><p><img src="GDR_4.png" alt><br>y: target, which is a constant, not relative to w<br>o: weighted sum of input, relative to w<br>x: constant<br>so rewrite o in term of w,x<br>o is equal to corresponding WiXie<br><strong>convert partial derivative to the weighted sum of input</strong></p>
+<p>-Xie corresponding input<br><img src="note_1.jpg" alt><br>just to memorize the equation</p>
 <h2 id="Final-GD-rule"><a href="#Final-GD-rule" class="headerlink" title="Final GD rule"></a>Final GD rule</h2><p><img src="eq1.png" alt><br>new weight(Wi left), learning rate(n|), old weight(Wi right), error(Oe),network output(Xie)</p>
 <p><img src="note_2.jpg" alt><br>Perceptron: accurate, but linear<br>GDR: not accurate, guArantee minimum(performance maybe worse)</p>
-<h1 id="GD-rule-Algorithm"><a href="#GD-rule-Algorithm" class="headerlink" title="GD rule Algorithm"></a>GD rule Algorithm</h1><p>also called batch learning</p>
-<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><h2 id="Repeat"><a href="#Repeat" class="headerlink" title="Repeat"></a>Repeat</h2><p>w is changed for each time</p>
+<h1 id="GD-Learning-Algorithm"><a href="#GD-Learning-Algorithm" class="headerlink" title="GD Learning Algorithm"></a>GD Learning Algorithm</h1><p>also called batch learning</p>
+<h2 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h2><p>Examples {(Xe,Ye)}N,E=1， initial weights Wi set to small random values, learning rate parameter η</p>
+<h2 id="Repeat"><a href="#Repeat" class="headerlink" title="Repeat"></a>Repeat</h2><p>w is changed for each time</p>
 <p>Using perceptron network not its rule</p>
-<p>update the ∆w</p>
 <p>only if all the examples have been used, jump the for loop</p>
-<p>∆Wi is the accumulated wastage</p>
-<h1 id="Incremental-gradient-descent"><a href="#Incremental-gradient-descent" class="headerlink" title="Incremental gradient descent"></a>Incremental gradient descent</h1><p>##<br><img src="IGDrule_1.png" alt><br>not sum in IGD rule</p>
+<p>update the ∆w when repeat all examples</p>
+<p>∆Wi is the accumulated wastage<br>Repeat until termination condition is satisfied</p>
+<h1 id="GD-Learning-Example"><a href="#GD-Learning-Example" class="headerlink" title="GD Learning Example"></a>GD Learning Example</h1><p><img src="GD_example_2.png" alt><br><img src="GD_example_1.png" alt></p>
+<h1 id="Incremental-gradient-descent"><a href="#Incremental-gradient-descent" class="headerlink" title="Incremental gradient descent"></a>Incremental gradient descent</h1><p>The gradient descent rule faces two difficulties in practice:</p>
+<ul>
+<li>It converges very slowly</li>
+<li>If there are multiple local minima in the error surface, then there is no guarantee that it will find the global minimum</li>
+<li>That is why, a stochastic version called incremental gradient descent rule is developed to overcome these difficulties.<h2 id="Incremental-gradient-is-implemented"><a href="#Incremental-gradient-is-implemented" class="headerlink" title="Incremental gradient is implemented"></a>Incremental gradient is implemented</h2><img src="IGDrule_1.png" alt><br>no sum Σ in IGD rule</li>
+</ul>
 <p>no ∆ in final equation</p>
 <p>faster than GD rule, because dont need wait for all data</p>
+<h2 id="Incremental-Gradient-Descent-Learning-Algorithm"><a href="#Incremental-Gradient-Descent-Learning-Algorithm" class="headerlink" title="Incremental Gradient Descent Learning Algorithm"></a>Incremental Gradient Descent Learning Algorithm</h2><h3 id="Initialization-1"><a href="#Initialization-1" class="headerlink" title="Initialization"></a>Initialization</h3><p>Example {(Xe,Ye)}N,e = 1, initial weights Wi set to small random values, learning rate parameter η</p>
+<h3 id="Repeat-1"><a href="#Repeat-1" class="headerlink" title="Repeat"></a>Repeat</h3><p><img src="IGDrule_algorithm.png" alt><br>It is similar to GD Learning algorithm</p>
 <h1 id="Sigmoidal-Perceptrons"><a href="#Sigmoidal-Perceptrons" class="headerlink" title="Sigmoidal Perceptrons"></a>Sigmoidal Perceptrons</h1><p>can differentiate, more reasonable<br><img src="Sig_1.png" alt><br>slightly change does not change the value suddenly</p>
-<h1 id="Training-Sigmoidal-Perceptrons"><a href="#Training-Sigmoidal-Perceptrons" class="headerlink" title="Training Sigmoidal Perceptrons"></a>Training Sigmoidal Perceptrons</h1><p>dont need cover too much, still using GD rule, now has sigmoidal function<br>only plus a σ’(s)<br><img src="note_3.jpg" alt></p>
+<h1 id="Training-Sigmoidal-Perceptrons"><a href="#Training-Sigmoidal-Perceptrons" class="headerlink" title="Training Sigmoidal Perceptrons"></a>Training Sigmoidal Perceptrons</h1><p>dont need cover too much, still using GD rule, now has sigmoidal function<br><img src="Sigm_1.png" alt><br>only plus a σ’(s)<br><img src="note_3.jpg" alt></p>
 <ul>
 <li>Final equation<br><img src="Sigm_2.png" alt></li>
 </ul>
-<h1 id="GD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><a href="#GD-Learing-Algorithm-for-Sigmoidal-Perceptrons" class="headerlink" title="GD Learing Algorithm for Sigmoidal Perceptrons"></a>GD Learing Algorithm for Sigmoidal Perceptrons</h1><h2 id="Initialization-1"><a href="#Initialization-1" class="headerlink" title="Initialization"></a>Initialization</h2><h2 id="Repeat-1"><a href="#Repeat-1" class="headerlink" title="Repeat"></a>Repeat</h2><h1 id="IGD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><a href="#IGD-Learing-Algorithm-for-Sigmoidal-Perceptrons" class="headerlink" title="IGD Learing Algorithm for Sigmoidal Perceptrons"></a>IGD Learing Algorithm for Sigmoidal Perceptrons</h1><h2 id="Initialization-2"><a href="#Initialization-2" class="headerlink" title="Initialization"></a>Initialization</h2><h2 id="Repeat-2"><a href="#Repeat-2" class="headerlink" title="Repeat"></a>Repeat</h2><h1 id="Perceptron-Rule-vs-GD-rule"><a href="#Perceptron-Rule-vs-GD-rule" class="headerlink" title="Perceptron Rule vs. GD rule"></a>Perceptron Rule vs. GD rule</h1><ul>
-<li>GD try to find sum squared error (target - net) value rather than (target - output) value</li>
-</ul>
-<p>Perceptron: accurate, if the proble is linearly seperable</p>
-<p>Gradient descent</p>
+<h1 id="GD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><a href="#GD-Learing-Algorithm-for-Sigmoidal-Perceptrons" class="headerlink" title="GD Learing Algorithm for Sigmoidal Perceptrons"></a>GD Learing Algorithm for Sigmoidal Perceptrons</h1><h2 id="Initialization-2"><a href="#Initialization-2" class="headerlink" title="Initialization"></a>Initialization</h2><p><img src="Initialization.png" alt></p>
+<h2 id="Repeat-2"><a href="#Repeat-2" class="headerlink" title="Repeat"></a>Repeat</h2><p><img src="Sigm_repeat.png" alt></p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><img src="Sigm_example_1.png" alt><br><img src="Sigm_example_2.png" alt></p>
+<h1 id="IGD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><a href="#IGD-Learing-Algorithm-for-Sigmoidal-Perceptrons" class="headerlink" title="IGD Learing Algorithm for Sigmoidal Perceptrons"></a>IGD Learing Algorithm for Sigmoidal Perceptrons</h1><h2 id="Initialization-3"><a href="#Initialization-3" class="headerlink" title="Initialization"></a>Initialization</h2><p><img src="Initialization_1.png" alt></p>
+<h2 id="Repeat-3"><a href="#Repeat-3" class="headerlink" title="Repeat"></a>Repeat</h2><p><img src="IGD_repeat.png" alt></p>
+<h1 id="Perceptron-Rule-vs-GD-rule"><a href="#Perceptron-Rule-vs-GD-rule" class="headerlink" title="Perceptron Rule vs. GD rule"></a>Perceptron Rule vs. GD rule</h1><ul>
+<li><p>GD try to find sum squared error (target - net) value rather than (target - output) value</p>
 <ul>
-<li>Perceptron rule (target - thresholded output) guaranteed to converge to a separating hyperplane if the problem is linearly separable</li>
+<li><p>Perceptron will find the decision boundary which minimizes the classification error<br>(accurate, if the proble is linearly seperable)</p>
+</li>
+<li><p>Gradient descent decision boundary may leave more instances misclassified as compared to the perceptron rule: could have a higher misclassification rate than with perceptron rule.</p>
+</li>
 </ul>
-<h1 id="The-error-surface"><a href="#The-error-surface" class="headerlink" title="The error surface"></a>The error surface</h1><h1 id="Batch-vs-incremental-learning"><a href="#Batch-vs-incremental-learning" class="headerlink" title="Batch vs. incremental learning"></a>Batch vs. incremental learning</h1><h2 id="Batch-Learning"><a href="#Batch-Learning" class="headerlink" title="Batch Learning"></a>Batch Learning</h2><p><img src="batch_1.png" alt></p>
-<h2 id="Incremental-Learning"><a href="#Incremental-Learning" class="headerlink" title="Incremental Learning"></a>Incremental Learning</h2><p><img src="incremental.png" alt></p>
-<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><h2 id="Perceptron-training"><a href="#Perceptron-training" class="headerlink" title="Perceptron training"></a>Perceptron training</h2><h2 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h2><h2 id="The-fall-of-the-Perceptron"><a href="#The-fall-of-the-Perceptron" class="headerlink" title="The fall of the Perceptron"></a>The fall of the Perceptron</h2><p>limitation is too strong</p>
+</li>
+<li><p>Perceptron rule (target - thresholded output) guaranteed to converge to a separating hyperplane if the problem is linearly separable</p>
+</li>
+</ul>
+<h1 id="The-error-surface"><a href="#The-error-surface" class="headerlink" title="The error surface"></a>The error surface</h1><p>The lines surfaces lies in a space with a horizontal axis for each weight and one vertical exis for the error<br>    - For a linear neuron, it is a quadratic bowl<br>    - Vertical cross-sections are parabolas<br>    - Horizontal cross-sections are ellipses<br><img src="error_surface.png" alt></p>
+<h1 id="Batch-vs-incremental-learning"><a href="#Batch-vs-incremental-learning" class="headerlink" title="Batch vs. incremental learning"></a>Batch vs. incremental learning</h1><h2 id="Batch-Learning"><a href="#Batch-Learning" class="headerlink" title="Batch Learning"></a>Batch Learning</h2><p>Batch Learning does steepest descent on the error surface<br><img src="batch_1.png" alt></p>
+<h2 id="Incremental-Learning"><a href="#Incremental-Learning" class="headerlink" title="Incremental Learning"></a>Incremental Learning</h2><p>Incremental Learning zigzags around the direction of steepest descent<br><img src="incremental.png" alt></p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><h2 id="Perceptron-training"><a href="#Perceptron-training" class="headerlink" title="Perceptron training"></a>Perceptron training</h2><ul>
+<li>Uses threshold unit</li>
+<li>Converges after a finite number of iterations</li>
+<li>Output hypothesis classifies training datat perfectly</li>
+<li>Linear separability neccessary<h2 id="Gradient-Descent"><a href="#Gradient-Descent" class="headerlink" title="Gradient Descent"></a>Gradient Descent</h2></li>
+<li>Uses unthresholded linear unit</li>
+<li>Converges asymptotically toward a minimum error hypothesis</li>
+<li>Termination is not guaranteed</li>
+<li>Linear separability not neccessary</li>
+</ul>
+<h2 id="The-fall-of-the-Perceptron"><a href="#The-fall-of-the-Perceptron" class="headerlink" title="The fall of the Perceptron"></a>The fall of the Perceptron</h2><ul>
+<li>Limitation is too strong: Unless input categories were <strong>Linear Separable</strong>, a perceptron could not learn to discriminate between them</li>
+<li>Unfortunately, ite appeared that many important categories were not linearly separable.</li>
+</ul>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -694,7 +744,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Gradient-Descent-Rule"><span class="nav-number">1.</span> <span class="nav-text">The Gradient Descent Rule</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-gradient-descent-to-search-the-hypothesis-sapce"><span class="nav-number">1.1.</span> <span class="nav-text">Use gradient descent to search the hypothesis sapce</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Understand"><span class="nav-number">1.2.</span> <span class="nav-text">Understand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-objective-is-to-minimze-the-following-errror"><span class="nav-number">1.3.</span> <span class="nav-text">The objective is to minimze the following errror</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error-Surface"><span class="nav-number">2.</span> <span class="nav-text">Error Surface</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Moving-downfill"><span class="nav-number">2.1.</span> <span class="nav-text">Moving downfill</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Illustration-of-Gradiet-Descent"><span class="nav-number">3.</span> <span class="nav-text">Illustration of Gradiet Descent</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Explain-GDR"><span class="nav-number">4.</span> <span class="nav-text">Explain GDR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Final-GD-rule"><span class="nav-number">4.1.</span> <span class="nav-text">Final GD rule</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GD-rule-Algorithm"><span class="nav-number">5.</span> <span class="nav-text">GD rule Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization"><span class="nav-number">5.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repeat"><span class="nav-number">5.2.</span> <span class="nav-text">Repeat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Incremental-gradient-descent"><span class="nav-number">6.</span> <span class="nav-text">Incremental gradient descent</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sigmoidal-Perceptrons"><span class="nav-number">7.</span> <span class="nav-text">Sigmoidal Perceptrons</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Training-Sigmoidal-Perceptrons"><span class="nav-number">8.</span> <span class="nav-text">Training Sigmoidal Perceptrons</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><span class="nav-number">9.</span> <span class="nav-text">GD Learing Algorithm for Sigmoidal Perceptrons</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization-1"><span class="nav-number">9.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repeat-1"><span class="nav-number">9.2.</span> <span class="nav-text">Repeat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IGD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><span class="nav-number">10.</span> <span class="nav-text">IGD Learing Algorithm for Sigmoidal Perceptrons</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization-2"><span class="nav-number">10.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repeat-2"><span class="nav-number">10.2.</span> <span class="nav-text">Repeat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Rule-vs-GD-rule"><span class="nav-number">11.</span> <span class="nav-text">Perceptron Rule vs. GD rule</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-error-surface"><span class="nav-number">12.</span> <span class="nav-text">The error surface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Batch-vs-incremental-learning"><span class="nav-number">13.</span> <span class="nav-text">Batch vs. incremental learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Batch-Learning"><span class="nav-number">13.1.</span> <span class="nav-text">Batch Learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Incremental-Learning"><span class="nav-number">13.2.</span> <span class="nav-text">Incremental Learning</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">14.</span> <span class="nav-text">Summary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Perceptron-training"><span class="nav-number">14.1.</span> <span class="nav-text">Perceptron training</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradient-Descent"><span class="nav-number">14.2.</span> <span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-fall-of-the-Perceptron"><span class="nav-number">14.3.</span> <span class="nav-text">The fall of the Perceptron</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#The-Gradient-Descent-Rule"><span class="nav-number">1.</span> <span class="nav-text">The Gradient Descent Rule</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Use-gradient-descent-to-search-the-hypothesis-space"><span class="nav-number">1.1.</span> <span class="nav-text">Use gradient descent to search the hypothesis space</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Understand"><span class="nav-number">1.2.</span> <span class="nav-text">Understand</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-objective-is-to-minimze-the-following-errror"><span class="nav-number">1.3.</span> <span class="nav-text">The objective is to minimze the following errror</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-Training-is-a-process-of-minimizing-the-error-E-w-in-the-steepest-direction-most-rapid-decrease-this-is-in-direction-opposite-to-the-gradient"><span class="nav-number">1.4.</span> <span class="nav-text">The Training is a process of minimizing the error E(w) in the steepest direction (most rapid decrease), this is in direction opposite to the gradient:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Error-Surface"><span class="nav-number">2.</span> <span class="nav-text">Error Surface</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Moving-downfill"><span class="nav-number">2.1.</span> <span class="nav-text">Moving downfill</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Illustration-of-Gradiet-Descent"><span class="nav-number">3.</span> <span class="nav-text">Illustration of Gradiet Descent</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Explain-GDR"><span class="nav-number">4.</span> <span class="nav-text">Explain GDR</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Final-GD-rule"><span class="nav-number">4.1.</span> <span class="nav-text">Final GD rule</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GD-Learning-Algorithm"><span class="nav-number">5.</span> <span class="nav-text">GD Learning Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization"><span class="nav-number">5.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repeat"><span class="nav-number">5.2.</span> <span class="nav-text">Repeat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GD-Learning-Example"><span class="nav-number">6.</span> <span class="nav-text">GD Learning Example</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Incremental-gradient-descent"><span class="nav-number">7.</span> <span class="nav-text">Incremental gradient descent</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Incremental-gradient-is-implemented"><span class="nav-number">7.1.</span> <span class="nav-text">Incremental gradient is implemented</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Incremental-Gradient-Descent-Learning-Algorithm"><span class="nav-number">7.2.</span> <span class="nav-text">Incremental Gradient Descent Learning Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Initialization-1"><span class="nav-number">7.2.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Repeat-1"><span class="nav-number">7.2.2.</span> <span class="nav-text">Repeat</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sigmoidal-Perceptrons"><span class="nav-number">8.</span> <span class="nav-text">Sigmoidal Perceptrons</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Training-Sigmoidal-Perceptrons"><span class="nav-number">9.</span> <span class="nav-text">Training Sigmoidal Perceptrons</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#GD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><span class="nav-number">10.</span> <span class="nav-text">GD Learing Algorithm for Sigmoidal Perceptrons</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization-2"><span class="nav-number">10.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repeat-2"><span class="nav-number">10.2.</span> <span class="nav-text">Repeat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-number">10.3.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#IGD-Learing-Algorithm-for-Sigmoidal-Perceptrons"><span class="nav-number">11.</span> <span class="nav-text">IGD Learing Algorithm for Sigmoidal Perceptrons</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Initialization-3"><span class="nav-number">11.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Repeat-3"><span class="nav-number">11.2.</span> <span class="nav-text">Repeat</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Perceptron-Rule-vs-GD-rule"><span class="nav-number">12.</span> <span class="nav-text">Perceptron Rule vs. GD rule</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-error-surface"><span class="nav-number">13.</span> <span class="nav-text">The error surface</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Batch-vs-incremental-learning"><span class="nav-number">14.</span> <span class="nav-text">Batch vs. incremental learning</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Batch-Learning"><span class="nav-number">14.1.</span> <span class="nav-text">Batch Learning</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Incremental-Learning"><span class="nav-number">14.2.</span> <span class="nav-text">Incremental Learning</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">15.</span> <span class="nav-text">Summary</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Perceptron-training"><span class="nav-number">15.1.</span> <span class="nav-text">Perceptron training</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Gradient-Descent"><span class="nav-number">15.2.</span> <span class="nav-text">Gradient Descent</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#The-fall-of-the-Perceptron"><span class="nav-number">15.3.</span> <span class="nav-text">The fall of the Perceptron</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -735,7 +785,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">total words: 1.6k</span>
+  <span class="post-count">total words: 2.3k</span>
 </div>
 
         
