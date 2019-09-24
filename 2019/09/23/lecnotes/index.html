@@ -131,7 +131,7 @@
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/23/lecnotes/derivation_6.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/23/lecnotes/batch_learning.png">
 <meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/23/lecnotes/batch_learning_1.png">
-<meta property="og:updated_time" content="2019-09-23T13:30:07.838Z">
+<meta property="og:updated_time" content="2019-09-24T05:47:30.319Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190923-301">
 <meta name="twitter:description" content="Multilayer Perceptrons">
@@ -392,7 +392,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  742
+                  818
                 </span>
               
 
@@ -408,7 +408,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  4
+                  5
                 </span>
               
             </div>
@@ -502,22 +502,20 @@
 </ul>
 <p><strong>Backward</strong></p>
 <ul>
-<li>compute the benefits βk at the nodes k in the output layer:<br><img src="benefits_bk.png" alt></li>
+<li>compute the benefits βk at the nodes k in the output layer:<br><img src="benefits_bk.png" alt><br>Every node on output layer only has one output, so benefit βk only compute Yk - Ok where is target value minus actual value</li>
 </ul>
 <p><strong>Effects from the output nodes</strong><br>yk is the target output, ok is the actual output</p>
 <ul>
-<li>compute the changes for weights j→k on connections to nodes in the output layer:<br><img src="weights.png" alt></li>
+<li>compute the changes for weights j→k on connections to nodes in the output layer:<br><img src="weights.png" alt><br>Δwij is the weights to the corresponding output in hidden layer<br>Δwoj is the bias </li>
 </ul>
 <p><strong>Effects from the output of the neuron</strong></p>
 <ul>
-<li>compute the benefits βj for the hidden nodes j with the formula:<br><img src="benefits_bj.png" alt></li>
+<li>compute the benefits βj for the hidden nodes j with the formula:<br><img src="benefits_bj.png" alt><br>Every node on hidden layer has multi nodes on output layer, so benefit βj has to compute the sume of benefit βk times weight wjk</li>
 </ul>
 <p><strong>Effects from multiple nodes in the next layer</strong></p>
 <ul>
-<li><p>compute the changes for the weights i→j on connections to nodes in the hidden layer:<br><img src="weights_2.png" alt></p>
-</li>
-<li><p>update the weights by the computed changes:<br>w = w +  Δw</p>
-</li>
+<li>compute the changes for the weights i→j on connections to nodes in the hidden layer:<br><img src="weights_2.png" alt><br>Δwij is the weights to the corresponding output in output layer<br>Δwoj is the bias </li>
+<li>update the weights by the computed changes:<br>w = w +  Δw</li>
 </ul>
 <p>Unitl termination conditon is satified</p>
 <h1 id="On-line-Training"><a href="#On-line-Training" class="headerlink" title="On-line Training"></a>On-line Training</h1><p>Revision by example is called **on-line(incremental) training<br><img src="on_line_training.png" alt></p>
@@ -784,7 +782,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">total words: 3.5k</span>
+  <span class="post-count">total words: 3.6k</span>
 </div>
 
         
