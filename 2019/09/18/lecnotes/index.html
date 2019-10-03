@@ -107,10 +107,13 @@
 <meta property="og:site_name" content="Lingyun.Chen">
 <meta property="og:description" content="Z Sets">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-09-18T09:01:45.417Z">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/18/lecnotes/partial_expression.png">
+<meta property="og:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/18/lecnotes/summary.png">
+<meta property="og:updated_time" content="2019-10-03T09:00:51.234Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190918-307">
 <meta name="twitter:description" content="Z Sets">
+<meta name="twitter:image" content="https://yukinooo7.github.io/lynChen.github.io/2019/09/18/lecnotes/partial_expression.png">
 
 
 
@@ -367,7 +370,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  322
+                  920
                 </span>
               
 
@@ -383,7 +386,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  2
+                  5
                 </span>
               
             </div>
@@ -424,6 +427,74 @@
 <h1 id="Difference"><a href="#Difference" class="headerlink" title="Difference"></a>Difference</h1><p>Let S and T be arbibrary sets. Then <strong>x ∈ (S \ T )</strong> is true if, and only if, x ∈ S and x ∈/ T .</p>
 <h1 id="Cardinality"><a href="#Cardinality" class="headerlink" title="Cardinality"></a>Cardinality</h1><p>The cardinality of a set is the number of elements in it.<br>If s is an arbitrary set, then the cardinality of S is denoted # S.</p>
 <h1 id="Cartesian-Product"><a href="#Cartesian-Product" class="headerlink" title="Cartesian Product"></a>Cartesian Product</h1><p>Cartesian products are one way of making objects whic hhave structure.<br>If S1, . . . ,Sn are arbitrary sets, then<br>S1 × ···× Sn<br>is the set of n-tuples over S1, . . . ,Sn:<br>S1 × ···× Sn ==<br>{ (e1, . . . , en) | (e1 ∈ S1) ∧···∧(en ∈ Sn)} .</p>
+<h1 id="Domain"><a href="#Domain" class="headerlink" title="Domain"></a>Domain</h1><ul>
+<li>the set representing all input values for which the function is defined</li>
+</ul>
+<h1 id="Range"><a href="#Range" class="headerlink" title="Range"></a>Range</h1><ul>
+<li>the set representing all outputs of the function that correspond to a defined input</li>
+</ul>
+<h1 id="Definition-1"><a href="#Definition-1" class="headerlink" title="Definition 1"></a>Definition 1</h1><ul>
+<li>If f is an arbitrary function then <strong>dom f</strong> is an expression returning the domain of f and <strong>ran f</strong> is an expression returning its range</li>
+</ul>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p>if PN == {(mungo,5678),(mary,1234)} then<br>dom PN = mungo, mary<br>ran PN = 5678, 1234</p>
+<h2 id="Theorems-about-domain-and-range"><a href="#Theorems-about-domain-and-range" class="headerlink" title="Theorems about domain and range"></a>Theorems about domain and range</h2><ul>
+<li>#dom f >= #ran f</li>
+<li>dom(f U g) = dom(f) U dom(g)</li>
+<li>ran(f U g) = ran(f) U ran(g)</li>
+<li>dom(f ∩ g) =(dom f) ∩ (dom g)</li>
+<li>ran(f ∩ g) = (ran f) ∩ (ran g)</li>
+<li>dom ∅ = ∅</li>
+<li>ran ∅ = ∅</li>
+</ul>
+<h1 id="Partial-Functions-Definition-2"><a href="#Partial-Functions-Definition-2" class="headerlink" title="Partial Functions (Definition 2)"></a>Partial Functions (Definition 2)</h1><ul>
+<li>If f is a function from T1 to T2, then f is a partial function. The set of all partial functions from T1 to T2 is given by the expression<br><img src="partial_expression.png" alt></li>
+</ul>
+<h2 id="Note"><a href="#Note" class="headerlink" title="Note"></a>Note</h2><ul>
+<li>∅ ∈ (T1 →| T2)</li>
+<li>if f ∈ (T1 →| T2) then f may be undefined for some value in T1</li>
+</ul>
+<h1 id="Total-Functions-Definition-3"><a href="#Total-Functions-Definition-3" class="headerlink" title="Total Functions (Definition 3)"></a>Total Functions (Definition 3)</h1><ul>
+<li>if  f ∈ T1 →I T2 and dom f = T1, then f is said to be a total function from T1 to T2.</li>
+<li>The set of total functions from T1 to T2 is given by the expression: <strong>T1 → T2</strong></li>
+</ul>
+<h1 id="Injection-Definition-4"><a href="#Injection-Definition-4" class="headerlink" title="Injection Definition 4"></a>Injection Definition 4</h1><ul>
+<li>A funtion is one-to-on if and only if, every element in the domain maps to a different element in the range. </li>
+<li>One-to-one functions are also called injections</li>
+</ul>
+<h1 id="Surjection-Definition-5"><a href="#Surjection-Definition-5" class="headerlink" title="Surjection Definition 5"></a>Surjection Definition 5</h1><ul>
+<li>A function f is onto if, and only if, every possible element y ∈ ran f has some corresponding value x ∈ dom f such that f(x) = y</li>
+<li>Functions that are <strong>onto</strong> are also called surjections.</li>
+<li>All elements have input<h2 id="Example-1"><a href="#Example-1" class="headerlink" title="Example"></a>Example</h2>T1 == {a,b,c,d}<br>T2 == {e,f,g}<br>f1 :T1 →| T2<br>f2 :T1 →| T2<br>f1 == {(a,e),(b,f),(c,g)} <strong>surjection</strong><br>f2 == {(a,e),(b,f)} <strong>not a surjection</strong></li>
+</ul>
+<h1 id="Bijection"><a href="#Bijection" class="headerlink" title="Bijection"></a>Bijection</h1><p>Finally, if a function is both an injection and a surjection, then it is called a bijection</p>
+<h1 id="Maplet-Notation"><a href="#Maplet-Notation" class="headerlink" title="Maplet Notation"></a>Maplet Notation</h1><ul>
+<li>A more convenient way of writing the function {(mary,1234),(mungo,5678)} is to write<br>{mary |→ 1234, mungo |→ 5678}</li>
+<li>The symbol |→ 1234 is called a maplet arrow:the expression mary |→1234 is called a maplet</li>
+</ul>
+<h1 id="Domain-Restriction-Definition-6"><a href="#Domain-Restriction-Definition-6" class="headerlink" title="Domain Restriction Definition 6"></a>Domain Restriction Definition 6</h1><ul>
+<li>⊲ is the domain restriction </li>
+<li>suppose f is a function f:T1 →| T2 and S is a set s: PT1 then S ⊲ f is an expression which returns the function obtained from f by removing from it all maplet x | → y such that x ∈/ S</li>
+</ul>
+<h2 id="Example-2"><a href="#Example-2" class="headerlink" title="Example"></a>Example</h2><p>Let PN == {mary |→ 1234, mungo |→5678, midge |→ 9999} and S1 == {mary,mungo}, S2 == {midge}<br>then S1 ⊲ PN = {mary |→ 1234, mungo |→5678}, S2 ⊲ PN ={midge |→ 9999}.</p>
+<ul>
+<li>We remove 9999 because S1 only has 1234 and 5678.</li>
+</ul>
+<h1 id="Range-Restriction"><a href="#Range-Restriction" class="headerlink" title="Range Restriction"></a>Range Restriction</h1><ul>
+<li>⊳ is the range restriction</li>
+<li>Suppose f is a function f: T1→| T2 and S is a set S:PT2 then f ⊳ S is an expression which returns the function obtained from f by removing from it all maplets x |→ y such that y ∈/ S.</li>
+</ul>
+<h2 id="Example-3"><a href="#Example-3" class="headerlink" title="Example"></a>Example</h2><p>S1 == {1234,5678}<br>S2 = {9999}</p>
+<p>f ⊳ S1 = {mary |→ 1234, mungo |→ 5678}<br>f ⊳ S1 = {midge |→ 9999}</p>
+<h1 id="Domain-subtraction"><a href="#Domain-subtraction" class="headerlink" title="Domain subtraction"></a>Domain subtraction</h1><ul>
+<li>⊲- is the domain subtraction operator</li>
+<li>Suppose f is a function f: T1 →| T2 and S is a set S: PT1 then S ⊲- f is an expression which returns the function obtained from f by removing from it all maplets x | → y such that x ∈ S.<h2 id="Example-4"><a href="#Example-4" class="headerlink" title="Example"></a>Example</h2>S == mary<br>S ⊲- PN ={mungo|→5678，midge|→9999}</li>
+</ul>
+<h1 id="Range-Subtraction"><a href="#Range-Subtraction" class="headerlink" title="Range Subtraction"></a>Range Subtraction</h1><ul>
+<li>⊳- is the range subtraction<h2 id="Example-5"><a href="#Example-5" class="headerlink" title="Example"></a>Example</h2>S == {1234,5678}<br>PN ⊳- S ={midge |→ 9999}</li>
+</ul>
+<h1 id="Function-Overriding"><a href="#Function-Overriding" class="headerlink" title="Function Overriding"></a>Function Overriding</h1><p>{PN\mary|→1234} U (mary|→1111) = mary |→ 1111<br>⊕ symbol is used for function overriding</p>
+<p>PN ⊕ {mary|→1111} = {mary|→1111,mungo|→5678,midge|→9999}</p>
+<h1 id="Summary"><a href="#Summary" class="headerlink" title="Summary"></a>Summary</h1><p><img src="summary.png" alt></p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -571,7 +642,7 @@
               
                 <a href="/lynChen.github.io/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -648,7 +719,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Set"><span class="nav-number">1.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Set-Equality"><span class="nav-number">2.</span> <span class="nav-text">Set Equality</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Subsets"><span class="nav-number">3.</span> <span class="nav-text">Subsets</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Proper-Subsets"><span class="nav-number">4.</span> <span class="nav-text">Proper Subsets</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-powerset-Operator"><span class="nav-number">5.</span> <span class="nav-text">The powerset Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union"><span class="nav-number">6.</span> <span class="nav-text">Union</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intersection"><span class="nav-number">7.</span> <span class="nav-text">Intersection</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Difference"><span class="nav-number">8.</span> <span class="nav-text">Difference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cardinality"><span class="nav-number">9.</span> <span class="nav-text">Cardinality</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cartesian-Product"><span class="nav-number">10.</span> <span class="nav-text">Cartesian Product</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Set"><span class="nav-number">1.</span> <span class="nav-text">Set</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Set-Equality"><span class="nav-number">2.</span> <span class="nav-text">Set Equality</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Subsets"><span class="nav-number">3.</span> <span class="nav-text">Subsets</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Proper-Subsets"><span class="nav-number">4.</span> <span class="nav-text">Proper Subsets</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#The-powerset-Operator"><span class="nav-number">5.</span> <span class="nav-text">The powerset Operator</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union"><span class="nav-number">6.</span> <span class="nav-text">Union</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Intersection"><span class="nav-number">7.</span> <span class="nav-text">Intersection</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Difference"><span class="nav-number">8.</span> <span class="nav-text">Difference</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cardinality"><span class="nav-number">9.</span> <span class="nav-text">Cardinality</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Cartesian-Product"><span class="nav-number">10.</span> <span class="nav-text">Cartesian Product</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Domain"><span class="nav-number">11.</span> <span class="nav-text">Domain</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Range"><span class="nav-number">12.</span> <span class="nav-text">Range</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition-1"><span class="nav-number">13.</span> <span class="nav-text">Definition 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-number">13.1.</span> <span class="nav-text">Example</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Theorems-about-domain-and-range"><span class="nav-number">13.2.</span> <span class="nav-text">Theorems about domain and range</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Partial-Functions-Definition-2"><span class="nav-number">14.</span> <span class="nav-text">Partial Functions (Definition 2)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Note"><span class="nav-number">14.1.</span> <span class="nav-text">Note</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Total-Functions-Definition-3"><span class="nav-number">15.</span> <span class="nav-text">Total Functions (Definition 3)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Injection-Definition-4"><span class="nav-number">16.</span> <span class="nav-text">Injection Definition 4</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Surjection-Definition-5"><span class="nav-number">17.</span> <span class="nav-text">Surjection Definition 5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-1"><span class="nav-number">17.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bijection"><span class="nav-number">18.</span> <span class="nav-text">Bijection</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Maplet-Notation"><span class="nav-number">19.</span> <span class="nav-text">Maplet Notation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Domain-Restriction-Definition-6"><span class="nav-number">20.</span> <span class="nav-text">Domain Restriction Definition 6</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-2"><span class="nav-number">20.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Range-Restriction"><span class="nav-number">21.</span> <span class="nav-text">Range Restriction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-3"><span class="nav-number">21.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Domain-subtraction"><span class="nav-number">22.</span> <span class="nav-text">Domain subtraction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-4"><span class="nav-number">22.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Range-Subtraction"><span class="nav-number">23.</span> <span class="nav-text">Range Subtraction</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Example-5"><span class="nav-number">23.1.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Function-Overriding"><span class="nav-number">24.</span> <span class="nav-text">Function Overriding</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Summary"><span class="nav-number">25.</span> <span class="nav-text">Summary</span></a></li></ol></div>
             
 
           </div>
@@ -689,7 +760,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">total words: 3.6k</span>
+  <span class="post-count">total words: 4.2k</span>
 </div>
 
         
