@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSE307,">
 
 
 
@@ -99,17 +99,18 @@
 
 
 
-<meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta name="description" content="Sequences and Bags">
+<meta name="keywords" content="CSE307">
 <meta property="og:type" content="article">
 <meta property="og:title" content="20190923-307">
-<meta property="og:url" content="https://yukinooo7.github.io/lynChen.github.io/2019/10/03/20190923-307/index.html">
+<meta property="og:url" content="https://yukinooo7.github.io/lynChen.github.io/2019/10/03/lecnotes/index.html">
 <meta property="og:site_name" content="Lingyun.Chen">
-<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta property="og:description" content="Sequences and Bags">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-03T06:10:37.504Z">
+<meta property="og:updated_time" content="2019-10-16T07:54:38.459Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="20190923-307">
-<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta name="twitter:description" content="Sequences and Bags">
 
 
 
@@ -140,7 +141,7 @@
 
 
 
-  <link rel="canonical" href="https://yukinooo7.github.io/lynChen.github.io/2019/10/03/20190923-307/">
+  <link rel="canonical" href="https://yukinooo7.github.io/lynChen.github.io/2019/10/03/lecnotes/">
 
 
 
@@ -283,7 +284,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://yukinooo7.github.io/lynChen.github.io/lynChen.github.io/2019/10/03/20190923-307/">
+    <link itemprop="mainEntityOfPage" href="https://yukinooo7.github.io/lynChen.github.io/lynChen.github.io/2019/10/03/lecnotes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lingyun">
@@ -323,6 +324,28 @@
           </span>
 
           
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/lynChen.github.io/categories/Lecture-Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Lecture Notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -344,7 +367,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  52
+                  572
                 </span>
               
 
@@ -360,7 +383,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  3
                 </span>
               
             </div>
@@ -382,7 +405,34 @@
       
 
       
-        <script>
+        <p>Sequences and Bags</p>
+<a id="more"></a>
+<h1 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h1><ul>
+<li>A sequence of type T is a (possible empty) list of values of type T, indexed by the natural numbers(N). The set of all sequences of type is given by <strong>seq T</strong></li>
+<li>So to declare that a variable <strong>σ</strong> is a sequence of type T, we write <strong>σ: seq T.</strong></li>
+<li>A sequence is enumerated by listing its contents, in order, between angle brackets <…>, with its elements separated by commas.</…></li>
+</ul>
+<h1 id="Definition1-Sequence-Length"><a href="#Definition1-Sequence-Length" class="headerlink" title="Definition1 (Sequence Length)"></a>Definition1 (Sequence Length)</h1><p>The length of a sequence σ is given by #σ</p>
+<h1 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h1><p>If σ1 and σ2 are both sequences then<br>σ1 ∩ σ2 is the sequence obtained by appending σ1 to σ2</p>
+<h1 id="Reversal"><a href="#Reversal" class="headerlink" title="Reversal"></a>Reversal</h1><p>If σ is a sequence, then <strong>rev σ</strong> is the sequence containing all the elements of σ, but in reverse order to that which they appear in σ.</p>
+<h1 id="Filtering"><a href="#Filtering" class="headerlink" title="Filtering"></a>Filtering</h1><p>if σ: seq T, S: IP T then <strong>σ | S</strong> is a sequence that contains jut those elements of σ that appear in S, in the order in which they appear in σ.</p>
+<h1 id="After"><a href="#After" class="headerlink" title="After"></a>After</h1><p>if σ is a sequence and n ∈ N then <strong>σ after n</strong> is the sequence obtained by removing the first n elements of σ</p>
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p>if f: T → U σ: seq T, then map f<t1,…,tn> = <f(x1),…,f(xn)></f(x1),…,f(xn)></t1,…,tn></p>
+<h1 id="Decomposition"><a href="#Decomposition" class="headerlink" title="Decomposition"></a>Decomposition</h1><ul>
+<li>Head: The head of a sequence σ is given by head σ</li>
+<li>Last: The last element in a sequence σ is given by last σ</li>
+<li>Front: The sequence obtained from σ by removing its last element is given by front σ.</li>
+<li>Tail: The sequence obtained from σ by removing its first element is given by tail σ.</li>
+</ul>
+<h1 id="Bags"><a href="#Bags" class="headerlink" title="Bags"></a>Bags</h1><p>The set of all over type T is given by the expression bag T. Like sets and sequences, bags may be enumerated by listing their contents between Strachey bracket:【】.</p>
+<h1 id="In"><a href="#In" class="headerlink" title="In"></a>In</h1><p>If B: bag T, x: T then the predicate x in B is true if and only if, x apeears in B at least once.</p>
+<h1 id="Sub-bags"><a href="#Sub-bags" class="headerlink" title="Sub-bags"></a>Sub-bags</h1><p>If B1, B2: bag T then the predicate B1 ∈ B2 (wrong symbol) is true iff each element that occurs in B1 occur in B1 no more often than it occurs B2</p>
+<h1 id="Counting-Bags"><a href="#Counting-Bags" class="headerlink" title="Counting Bags"></a>Counting Bags</h1><p>If B: bag T, x: T then the number of times x occurs in B (a natural number) is given by the expression B # x.</p>
+<h1 id="Scaling-bags"><a href="#Scaling-bags" class="headerlink" title="Scaling bags"></a>Scaling bags</h1><p>If B: bag T, n:N, then n X ○ B is a abg which contains the same elements as B, except that every element that occurs m times in B occurs n*m times in n X ○ B.</p>
+<h1 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h1><p>If B1, B2: bag T, then B1 U+ B2 is bag that contains just those values that occur in either B1 or B2, except that the number of times a values X occurs in B1 U+ B2 is equal to(B1#x)+(B2#x)</p>
+<h1 id="Making-bags-out-of-sequences"><a href="#Making-bags-out-of-sequences" class="headerlink" title="Making bags out of sequences"></a>Making bags out of sequences</h1><p>If σ: Set T then items(σ) is a bag over T such that a value x occurs in item(σ) exactly as many times as it appears in σ。</p>
+<h1 id="Making-bags-out-of-sequences-1"><a href="#Making-bags-out-of-sequences-1" class="headerlink" title="Making bags out of sequences"></a>Making bags out of sequences</h1><p>If σ: seq T then items(σ) is bag over T such that a value x occurs in items(σ) exactly as many times as it appears in σ.</p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -422,6 +472,12 @@
       
     </div>
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/lynChen.github.io/tags/CSE307/" rel="tag"><i class="fa fa-tag"></i> CSE307</a>
+          
+        </div>
       
 
       
@@ -492,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -578,6 +643,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition"><span class="nav-number">1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition1-Sequence-Length"><span class="nav-number">2.</span> <span class="nav-text">Definition1 (Sequence Length)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Concatenation"><span class="nav-number">3.</span> <span class="nav-text">Concatenation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reversal"><span class="nav-number">4.</span> <span class="nav-text">Reversal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Filtering"><span class="nav-number">5.</span> <span class="nav-text">Filtering</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#After"><span class="nav-number">6.</span> <span class="nav-text">After</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-number">7.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Decomposition"><span class="nav-number">8.</span> <span class="nav-text">Decomposition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bags"><span class="nav-number">9.</span> <span class="nav-text">Bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#In"><span class="nav-number">10.</span> <span class="nav-text">In</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sub-bags"><span class="nav-number">11.</span> <span class="nav-text">Sub-bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Counting-Bags"><span class="nav-number">12.</span> <span class="nav-text">Counting Bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Scaling-bags"><span class="nav-number">13.</span> <span class="nav-text">Scaling bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union"><span class="nav-number">14.</span> <span class="nav-text">Union</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Making-bags-out-of-sequences"><span class="nav-number">15.</span> <span class="nav-text">Making bags out of sequences</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Making-bags-out-of-sequences-1"><span class="nav-number">16.</span> <span class="nav-text">Making bags out of sequences</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -612,7 +693,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">total words: 4.2k</span>
+  <span class="post-count">total words: 4.8k</span>
 </div>
 
         
