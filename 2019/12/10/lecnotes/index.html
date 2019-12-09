@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://www.yukino424.cn/"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-circle.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CSE301,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Lecture notes of 301 Lecture 11">
+<meta name="keywords" content="CSE301">
+<meta property="og:type" content="article">
+<meta property="og:title" content="301-Lecture 11">
+<meta property="og:url" content="https://www.yukino424.cn/2019/12/10/lecnotes/index.html">
+<meta property="og:site_name" content="Lingyun.Chen">
+<meta property="og:description" content="Lecture notes of 301 Lecture 11">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/RNN_architecture.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/RNN_Forward_Pass.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/RNN_FF.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/Vanishing_gradients.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/Vanishing_gradients_1.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/RNN_LSTM.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/LSTM_Architecture.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/input.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/input_function.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/input_gate.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/input_gate_function.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/CEC.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/CEC_function.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/output_gate.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/output_gate_function.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/output.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/output_function.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/3_input.png">
+<meta property="og:updated_time" content="2019-12-09T10:10:29.948Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="301-Lecture 11">
+<meta name="twitter:description" content="Lecture notes of 301 Lecture 11">
+<meta name="twitter:image" content="https://www.yukino424.cn/2019/12/10/lecnotes/RNN_architecture.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+    
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.yukino424.cn/2019/12/10/lecnotes/">
+
+
+
+
+
+  <title>301-Lecture 11 | Lingyun.Chen</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/Yukinooo7/lynChen.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5     157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lingyun.Chen</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Lecture Notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yukino424.cn/2019/12/10/lecnotes/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lingyun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/gaomu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lingyun.Chen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">301-Lecture 11</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-10T12:06:52+08:00">
+                2019-12-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lecture-Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Lecture Notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  1.1k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  6
+                </span>
+              
+            </div>
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Lecture notes of 301 Lecture 11</p>
+<a id="more"></a>
+<h1 id="Introdction"><a href="#Introdction" class="headerlink" title="Introdction"></a>Introdction</h1><ul>
+<li>RNN were introduced in the late 80’s<ul>
+<li>Hochreiter discovers the ‘vanishing gradients’ problem in 1991</li>
+</ul>
+</li>
+<li>Long Short Term Memory published in 1997<ul>
+<li>LSTM: a recurrent network to overcome this problem.</li>
+</ul>
+</li>
+</ul>
+<h1 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h1><ul>
+<li>Feed forward networks<ul>
+<li>accept a fixed-sized vector as input</li>
+<li>produce a fixed-sized vector as output</li>
+<li>usually fixed amount of computational steps</li>
+</ul>
+</li>
+<li>Recurrent networks allow us to operate over sequences of vectors<ul>
+<li>the idea behind RNNs is to make use of sequential information, as in a traditional neural network all inputs (and outputs) are assumed independent of each other</li>
+<li>but for many tasks that’s a very bad idea: if you want to predict the next word in a sentence you better know which words came before it.</li>
+</ul>
+</li>
+</ul>
+<h1 id="RNN-Architecture"><a href="#RNN-Architecture" class="headerlink" title="RNN Architecture"></a>RNN Architecture</h1><ul>
+<li><p>RNNs are called recurrent because they perform the same task for every element of a sequence, with the output being depended on the previous computations (memory).</p>
+<ul>
+<li>inputs x(t)</li>
+<li>outputs y(t)</li>
+<li>hidden statee s(t): memory of the network</li>
+<li>a delay unit is introduced to hold activation until they are processed at the next step.</li>
+</ul>
+</li>
+<li><p>The decision a recurrent net reached at time step t-1 affects the decision it will reach one moment later at time step t</p>
+<ul>
+<li>two sources of input: the present and the recent past, which combine to determine how they respond to new data<br><img src="RNN_architecture.png" alt><br><img src="RNN_Forward_Pass.png" alt></li>
+</ul>
+</li>
+<li><p>RNN topologies range from partly recurrent to fully recurrent</p>
+<ul>
+<li>partly recurrent is a layered network with distinct input and output layers where the recurrence is limited to the hidden layer</li>
+<li>in fully recurrent networks each node gets inputs from all other nodes</li>
+</ul>
+</li>
+<li><p>The recurrent network can be converted into a feed forward network by unfolding over time<br><img src="RNN_FF.png" alt></p>
+</li>
+<li><p>This means all the earlier theory about feed forward networks learning follows through</p>
+</li>
+<li><p>In RNN errors can be propagated more than 2 layers in order to capture longer history information.</p>
+</li>
+<li><p>The above diagram has outpus at each time step, but depending on the task this may not be necesary. </p>
+</li>
+</ul>
+<h1 id="Back-Propagation-Through-Time-BPTT"><a href="#Back-Propagation-Through-Time-BPTT" class="headerlink" title="Back Propagation Through Time (BPTT)"></a>Back Propagation Through Time (BPTT)</h1><ul>
+<li>BPTT learning algorithm is an extension of standard backpropagation that performs gradients descent on an unfolded network.</li>
+<li>The gradient descent weight updates have contributions from each time step.</li>
+<li>The errors have to be back-propagated through time as well as through the network</li>
+<li>For recurrent networks, the loss function depends on the activation of the hidden layer through its influence on the output layer and through its influence on the hidden layer at the next step.</li>
+</ul>
+<h1 id="Vanishing-Gradients"><a href="#Vanishing-Gradients" class="headerlink" title="Vanishing Gradients"></a>Vanishing Gradients</h1><p><img src="Vanishing_gradients.png" alt><br><img src="Vanishing_gradients_1.png" alt></p>
+<h1 id="LSTM-introduction"><a href="#LSTM-introduction" class="headerlink" title="LSTM introduction"></a>LSTM introduction</h1><ul>
+<li>LSTM was invented to solve the vanishing gradients problem</li>
+<li>LSTM maintain a more constant error flow in the back propagation process</li>
+<li>LSTM can handle large sequences that are linked remotely.</li>
+<li>LSTM has the same idea as RNN</li>
+</ul>
+<h1 id="LSTM-Architecture"><a href="#LSTM-Architecture" class="headerlink" title="LSTM Architecture"></a>LSTM Architecture</h1><ul>
+<li>The basic unit in the hidden layer of a LSTM network is a memory block, it replaces the hidden unit in a traditional RNN.</li>
+<li>A memory block contains one or more memory cell and a pair of adaptive multiplicative gating units which gates input and output to all cells in the block</li>
+<li>Memory blocks allow cells to share the same gates thus reducing the number of parameters.<br><img src="RNN_LSTM.png" alt></li>
+</ul>
+<h1 id="LSTM-Architecture-1"><a href="#LSTM-Architecture-1" class="headerlink" title="LSTM Architecture"></a>LSTM Architecture</h1><h2 id="overview"><a href="#overview" class="headerlink" title="overview"></a>overview</h2><p><img src="LSTM_Architecture.png" alt></p>
+<h2 id="Input"><a href="#Input" class="headerlink" title="Input"></a>Input</h2><p><img src="input.png" alt></p>
+<ul>
+<li>The input layer decides which information from the input should be forwarded into the LSTM cell.</li>
+<li>By multiplying y(t-1) with the recurrent weight matrix Rz, the layer decides which inofrmation from the previous time step should be forwarded into the LSTM cell<br><img src="input_function.png" alt></li>
+</ul>
+<h2 id="Input-gate"><a href="#Input-gate" class="headerlink" title="Input gate"></a>Input gate</h2><p><img src="input_gate.png" alt></p>
+<ul>
+<li>The input gate controls write accessed to memory cells.</li>
+<li>This is realized by using the result of the squashing function σ as a factor which will be later multiplied by the squashed cell input z(t).</li>
+<li>The range of function σ is (0,1) and can be interpreted in case of 0 as write access denied and in case of 1 as write access granted.</li>
+<li>Note that all values in between are also possible.<br><img src="input_gate_function.png" alt></li>
+</ul>
+<h2 id="CEC"><a href="#CEC" class="headerlink" title="CEC"></a>CEC</h2><p><img src="CEC.png" alt></p>
+<ul>
+<li>Each memory cell contains a node with a self-connected recurrent edge of fixed weight one ensuring that the gradient can pass across many time steps without vanishing - which is called CEC (constant error carousel)</li>
+<li>The CEC solves the vanishing error problem. In the absence of new input or error signals to the cell the CEC local error back flow remains constant, neither growing or decaying.<br><img src="CEC_function.png" alt></li>
+</ul>
+<h2 id="Output-gate"><a href="#Output-gate" class="headerlink" title="Output gate"></a>Output gate</h2><p><img src="output_gate.png" alt></p>
+<ul>
+<li>The output gate controls read accessed from memory cells.</li>
+<li>This is realized by using the result of the squashing function σ as a factor which will be later multiplied by the squashed cell content h(c(t)).</li>
+<li>The range of function σ is (0,1) and can be interpreted in case of 0 as read access denied and in case of 1 as read access granted.</li>
+<li>Note that all values in between are also possible.<br><img src="output_gate_function.png" alt></li>
+</ul>
+<h2 id="Output"><a href="#Output" class="headerlink" title="Output"></a>Output</h2><p><img src="output.png" alt></p>
+<ul>
+<li>The value stored in the cell c(t) is squashed by function h, and whether this information gets output is decided by the output gate via o(t).<br><img src="output_function.png" alt></li>
+</ul>
+<h2 id="LSTM-Forward-Pass"><a href="#LSTM-Forward-Pass" class="headerlink" title="LSTM Forward Pass"></a>LSTM Forward Pass</h2><ul>
+<li>The cell state c is updated based on its current state and 3 inputs: a(z), a(in), a(out)<br><img src="3_input.png" alt></li>
+</ul>
+<h2 id="LSTM-Backward-Pass"><a href="#LSTM-Backward-Pass" class="headerlink" title="LSTM Backward Pass"></a>LSTM Backward Pass</h2><ul>
+<li>Errors arriving at cell outputs are propagated to the CEC</li>
+<li>Errors can stay for a long time inside the CEC</li>
+<li>This ensures non-decaying error</li>
+<li>can bridge time lags between input events and target signals</li>
+</ul>
+<h1 id="Advantages-of-LSTM"><a href="#Advantages-of-LSTM" class="headerlink" title="Advantages of LSTM"></a>Advantages of LSTM</h1><ul>
+<li>Non-decaying error backpropagration.</li>
+<li>For long time lag problesm, LSTM can handle noise and continuous values.</li>
+<li>No parameter fine tuning</li>
+<li>Memory for long time periods</li>
+</ul>
+<h1 id="Limitations-of-LSTM"><a href="#Limitations-of-LSTM" class="headerlink" title="Limitations of LSTM"></a>Limitations of LSTM</h1><ul>
+<li>LSTM allows information to be stored across arbitrary time lags and error signals to be carried far back in time.</li>
+<li>This potential strength however, can contribute to a weakness: the cells state c(t) often tend to grow linearly during the presentation of a time series.</li>
+<li>If we present a continueous input stream, the cell state may grow in <strong>unbounded fashion</strong> causing saturation of the output squashing function g(c(t)).</li>
+</ul>
+<h1 id="Conclusions"><a href="#Conclusions" class="headerlink" title="Conclusions"></a>Conclusions</h1><ul>
+<li>RNNs - self connected networks</li>
+<li>Vanishing gradients and long memory problems</li>
+<li>LSTM - solves the vanishing gradients and the long memory limitation problem.</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------<i class="fa fa-battery-quarter"></i>  End of this note-------------</div>
+    
+</div>
+      
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSE301/" rel="tag"><i class="fa fa-tag"></i> CSE301</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/09/lecnotes/" rel="next" title="301-Lecture-10">
+                <i class="fa fa-chevron-left"></i> 301-Lecture-10
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/12/11/lecnotes/" rel="prev" title="301-WEEK9">
+                301-WEEK9 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/gaomu.jpg" alt="Lingyun">
+            
+              <p class="site-author-name" itemprop="name">Lingyun</p>
+              <p class="site-description motion-element" itemprop="description">Fat Otaku</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/6364985874?is_all=1" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yukinooo72" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Yukinooo7" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Introdction"><span class="nav-number">1.</span> <span class="nav-text">Introdction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Motivation"><span class="nav-number">2.</span> <span class="nav-text">Motivation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#RNN-Architecture"><span class="nav-number">3.</span> <span class="nav-text">RNN Architecture</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Back-Propagation-Through-Time-BPTT"><span class="nav-number">4.</span> <span class="nav-text">Back Propagation Through Time (BPTT)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Vanishing-Gradients"><span class="nav-number">5.</span> <span class="nav-text">Vanishing Gradients</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LSTM-introduction"><span class="nav-number">6.</span> <span class="nav-text">LSTM introduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LSTM-Architecture"><span class="nav-number">7.</span> <span class="nav-text">LSTM Architecture</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#LSTM-Architecture-1"><span class="nav-number">8.</span> <span class="nav-text">LSTM Architecture</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#overview"><span class="nav-number">8.1.</span> <span class="nav-text">overview</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input"><span class="nav-number">8.2.</span> <span class="nav-text">Input</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Input-gate"><span class="nav-number">8.3.</span> <span class="nav-text">Input gate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CEC"><span class="nav-number">8.4.</span> <span class="nav-text">CEC</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output-gate"><span class="nav-number">8.5.</span> <span class="nav-text">Output gate</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Output"><span class="nav-number">8.6.</span> <span class="nav-text">Output</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LSTM-Forward-Pass"><span class="nav-number">8.7.</span> <span class="nav-text">LSTM Forward Pass</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LSTM-Backward-Pass"><span class="nav-number">8.8.</span> <span class="nav-text">LSTM Backward Pass</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Advantages-of-LSTM"><span class="nav-number">9.</span> <span class="nav-text">Advantages of LSTM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Limitations-of-LSTM"><span class="nav-number">10.</span> <span class="nav-text">Limitations of LSTM</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Conclusions"><span class="nav-number">11.</span> <span class="nav-text">Conclusions</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lingyun</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">total words: 7.2k</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>

@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="CSE301,">
+  <meta name="keywords" content="CSE307,">
 
 
 
@@ -99,43 +99,18 @@
 
 
 
-<meta name="description" content="Multilayer Perceptrons">
-<meta name="keywords" content="CSE301">
+<meta name="description" content="Sequences and Bags">
+<meta name="keywords" content="CSE307">
 <meta property="og:type" content="article">
-<meta property="og:title" content="20190923-301">
+<meta property="og:title" content="20190923-307">
 <meta property="og:url" content="https://www.yukino424.cn/2019/09/23/lecnotes/index.html">
 <meta property="og:site_name" content="Lingyun.Chen">
-<meta property="og:description" content="Multilayer Perceptrons">
+<meta property="og:description" content="Sequences and Bags">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/sigmoid.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/sigmoid_sum.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/sigmoid_figure.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/hyperbolic.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/multilayer_network_structure.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/MLNS.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/inner_input.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/most_rapid_error.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/initialization.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/hidden_output.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/total_output.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/benefits_bk.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/weights.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/benefits_bj.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/weights_2.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/on_line_training.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/derivation_1.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/derivation_2.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/derivation_3.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/derivation_4.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/derivation_5.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/derivation_6.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/batch_learning.png">
-<meta property="og:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/batch_learning_1.png">
-<meta property="og:updated_time" content="2019-09-24T05:47:30.319Z">
+<meta property="og:updated_time" content="2019-11-01T08:01:20.518Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="20190923-301">
-<meta name="twitter:description" content="Multilayer Perceptrons">
-<meta name="twitter:image" content="https://www.yukino424.cn/2019/09/23/lecnotes/sigmoid.png">
+<meta name="twitter:title" content="20190923-307">
+<meta name="twitter:description" content="Sequences and Bags">
 
 
 
@@ -172,7 +147,7 @@
 
 
 
-  <title>20190923-301 | Lingyun.Chen</title>
+  <title>20190923-307 | Lingyun.Chen</title>
   
 
 
@@ -326,7 +301,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">20190923-301</h1>
+          <h1 class="post-title" itemprop="name headline">20190923-307</h1>
         
 
         <div class="post-meta">
@@ -338,7 +313,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-23T19:47:38+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-09-23T14:10:37+08:00">
                 2019-09-23
               </time>
             
@@ -392,7 +367,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  818
+                  572
                 </span>
               
 
@@ -408,7 +383,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  5
+                  3
                 </span>
               
             </div>
@@ -430,97 +405,33 @@
       
 
       
-        <p>Multilayer Perceptrons</p>
+        <p>Sequences and Bags</p>
 <a id="more"></a>
-<h1 id="Multilayer-perceptron-MLP"><a href="#Multilayer-perceptron-MLP" class="headerlink" title="Multilayer perceptron (MLP)"></a>Multilayer perceptron (MLP)</h1><ul>
-<li>It is a hierarchical structure of several perceptrons, which overcomes the shortcomings of the single-layer networks.</li>
-<li>The MLP neural networks is able to learn to learn nonlinear function mappings.<ul>
-<li>Learning a rich variety of nonlinear decision surfaces.</li>
+<h1 id="Definition"><a href="#Definition" class="headerlink" title="Definition"></a>Definition</h1><ul>
+<li>A sequence of type T is a (possible empty) list of values of type T, indexed by the natural numbers(N). The set of all sequences of type is given by <strong>seq T</strong></li>
+<li>So to declare that a variable <strong>σ</strong> is a sequence of type T, we write <strong>σ: seq T.</strong></li>
+<li>A sequence is enumerated by listing its contents, in order, between angle brackets <…>, with its elements separated by commas.</…></li>
 </ul>
-</li>
-<li>Nonlinear functions can be represented by MLPs with units that use nonlinear activation functions.<ul>
-<li>Multiple layers of cascaded linear units still produce only linear mappings.</li>
+<h1 id="Definition1-Sequence-Length"><a href="#Definition1-Sequence-Length" class="headerlink" title="Definition1 (Sequence Length)"></a>Definition1 (Sequence Length)</h1><p>The length of a sequence σ is given by #σ</p>
+<h1 id="Concatenation"><a href="#Concatenation" class="headerlink" title="Concatenation"></a>Concatenation</h1><p>If σ1 and σ2 are both sequences then<br>σ1 ∩ σ2 is the sequence obtained by appending σ1 to σ2</p>
+<h1 id="Reversal"><a href="#Reversal" class="headerlink" title="Reversal"></a>Reversal</h1><p>If σ is a sequence, then <strong>rev σ</strong> is the sequence containing all the elements of σ, but in reverse order to that which they appear in σ.</p>
+<h1 id="Filtering"><a href="#Filtering" class="headerlink" title="Filtering"></a>Filtering</h1><p>if σ: seq T, S: IP T then <strong>σ | S</strong> is a sequence that contains jut those elements of σ that appear in S, in the order in which they appear in σ.</p>
+<h1 id="After"><a href="#After" class="headerlink" title="After"></a>After</h1><p>if σ is a sequence and n ∈ N then <strong>σ after n</strong> is the sequence obtained by removing the first n elements of σ</p>
+<h1 id="Map"><a href="#Map" class="headerlink" title="Map"></a>Map</h1><p>if f: T → U σ: seq T, then map f<t1,…,tn> = <f(x1),…,f(xn)></f(x1),…,f(xn)></t1,…,tn></p>
+<h1 id="Decomposition"><a href="#Decomposition" class="headerlink" title="Decomposition"></a>Decomposition</h1><ul>
+<li>Head: The head of a sequence σ is given by head σ</li>
+<li>Last: The last element in a sequence σ is given by last σ</li>
+<li>Front: The sequence obtained from σ by removing its last element is given by front σ.</li>
+<li>Tail: The sequence obtained from σ by removing its first element is given by tail σ.</li>
 </ul>
-</li>
-</ul>
-<h1 id="Differentiable-Activation-Functions-可微的激活函数"><a href="#Differentiable-Activation-Functions-可微的激活函数" class="headerlink" title="Differentiable Activation Functions 可微的激活函数"></a>Differentiable Activation Functions 可微的激活函数</h1><ul>
-<li>Training algorithms for MLP require <strong>differentiable, continuous nonlinear</strong> activation functions.<h2 id="Sigmoid-function"><a href="#Sigmoid-function" class="headerlink" title="Sigmoid function"></a>Sigmoid function</h2>Such a function is the sigmoid function:<br><img src="sigmoid.png" alt="sigmoid_functions"></li>
-</ul>
-<p>where s is the sum:<br><img src="sigmoid_sum.png" alt></p>
-<p>which is the products from the weights wi and the inputs xi.</p>
-<p><img src="sigmoid_figure.png" alt="sigmoid_figure.png"></p>
-<h2 id="Hyperbolic-tangent"><a href="#Hyperbolic-tangent" class="headerlink" title="Hyperbolic tangent"></a>Hyperbolic tangent</h2><ul>
-<li>Another nonlinear function often used in practice is the hyperbolic tanget:<br><img src="hyperbolic.png" alt="hyperbolic"></li>
-</ul>
-<p>the mean of tanh is 0</p>
-<h1 id="Multilayer-Network-Structure"><a href="#Multilayer-Network-Structure" class="headerlink" title="Multilayer Network Structure"></a>Multilayer Network Structure</h1><p><img src="multilayer_network_structure.png" alt="multilayer_network_structure"></p>
-<h2 id="A-two-layer-neural-network-implement-the-function"><a href="#A-two-layer-neural-network-implement-the-function" class="headerlink" title="A two layer neural network implement the function:"></a>A two layer neural network implement the function:</h2><p><img src="MLNS.png" alt><br>where<br><img src="inner_input.png" alt><br><strong>is the output of first layer which is regard as the input of second layer.</strong></p>
-<ul>
-<li><p>we can find the output of sigmoid from above Sigmoid function and the function here plus a bias w0 (Woj and Wok, for first layer and second layer respectively)</p>
-</li>
-<li><p>The hidden units enable the multilayer network to learn complex tasks by extracting progressively more meaningful information from the input examples.</p>
-</li>
-<li><p>The MLP has a highly connected topology since every input is connected to all nodes in the first hidden layer, every unit in the hidden layers is connected to all nodes in the next layer, and so on.</p>
-</li>
-<li><p>The input signals, initially these are the input examples, propagate through the neural network in a forward direction on a layer-by-layer basis, that is why they are aften alled <strong>feedforward multilayer networks</strong>.</p>
-</li>
-</ul>
-<h1 id="Representation-Power-of-MLP"><a href="#Representation-Power-of-MLP" class="headerlink" title="Representation Power of MLP"></a>Representation Power of MLP</h1><h2 id="Properties-concerning-the-representational-power-of-MLP"><a href="#Properties-concerning-the-representational-power-of-MLP" class="headerlink" title="Properties concerning the representational power of MLP:"></a>Properties concerning the representational power of MLP:</h2><ul>
-<li><p><strong>Learning arbitrary functions</strong>: any function can be learned with an arbitrary accuracy by a three-layer network;</p>
-</li>
-<li><p><strong>Learning continuous functions</strong>: every bounded continuous function can be learned with a small error by a two-layer networ (the number of hidden units depends on the function to be approximated)</p>
-</li>
-<li><p><strong>Learning Boolean functions</strong>: every Boolean function can be learned exactly by a two-layer network although the number of hidden units grows exponentially with the input dimension</p>
-</li>
-</ul>
-<h1 id="Backpropagation-Learning-Algorithm"><a href="#Backpropagation-Learning-Algorithm" class="headerlink" title="Backpropagation Learning Algorithm"></a>Backpropagation Learning Algorithm</h1><ul>
-<li><p>MLP became applicable on practical tasks after the discovery of a supervised training algorithm, the <strong>error backpropagation laearning algorithm</strong>.</p>
-</li>
-<li><p>The error backpropagation algorithm includes two passes through the network:</p>
-<ul>
-<li>forward pass</li>
-<li>backward pass</li>
-</ul>
-</li>
-<li><p>During the backward pass the weights are adjusted in accordance with the <strong>error correction rule</strong>. The actual network output is subtracted from the given output in the example and the weights are adjusted so as to make the network output close to the desired one.</p>
-</li>
-<li><p>The backpropagation algorithm does gradient descent as it moves in direction opposite to the gradient of the error, that is in direction of the steepest decrease of the error.</p>
-</li>
-<li><p>This is the direction of most rapid errpr decrease by varying all the weights simultaneously:<br><img src="most_rapid_error.png" alt></p>
-</li>
-<li><p>By gradient descent search, backpropagation training algorithm minimizes a cost function E (the mean square difference between the desired and actual net outputs).</p>
-</li>
-<li><p>The network is trained initially selecting small random weights and then presenting all training data incrementally.</p>
-</li>
-<li><p>Weights are adjusted after every trial using weights converge and the cost function is reduced to an acceptable value.</p>
-</li>
-</ul>
-<h2 id="Algorithm-part"><a href="#Algorithm-part" class="headerlink" title="Algorithm part"></a>Algorithm part</h2><h3 id="Initialization"><a href="#Initialization" class="headerlink" title="Initialization"></a>Initialization</h3><p><img src="initialization.png" alt></p>
-<h3 id="Repeat"><a href="#Repeat" class="headerlink" title="Repeat"></a>Repeat</h3><p>For each training example (x,y)<br><strong>Forward</strong></p>
-<ul>
-<li>calculate the outputs using the sigmoid function:<br><img src="hidden_output.png" alt><br>where O i = X i<br><img src="total_output.png" alt></li>
-</ul>
-<p><strong>Backward</strong></p>
-<ul>
-<li>compute the benefits βk at the nodes k in the output layer:<br><img src="benefits_bk.png" alt><br>Every node on output layer only has one output, so benefit βk only compute Yk - Ok where is target value minus actual value</li>
-</ul>
-<p><strong>Effects from the output nodes</strong><br>yk is the target output, ok is the actual output</p>
-<ul>
-<li>compute the changes for weights j→k on connections to nodes in the output layer:<br><img src="weights.png" alt><br>Δwij is the weights to the corresponding output in hidden layer<br>Δwoj is the bias </li>
-</ul>
-<p><strong>Effects from the output of the neuron</strong></p>
-<ul>
-<li>compute the benefits βj for the hidden nodes j with the formula:<br><img src="benefits_bj.png" alt><br>Every node on hidden layer has multi nodes on output layer, so benefit βj has to compute the sume of benefit βk times weight wjk</li>
-</ul>
-<p><strong>Effects from multiple nodes in the next layer</strong></p>
-<ul>
-<li>compute the changes for the weights i→j on connections to nodes in the hidden layer:<br><img src="weights_2.png" alt><br>Δwij is the weights to the corresponding output in output layer<br>Δwoj is the bias </li>
-<li>update the weights by the computed changes:<br>w = w +  Δw</li>
-</ul>
-<p>Unitl termination conditon is satified</p>
-<h1 id="On-line-Training"><a href="#On-line-Training" class="headerlink" title="On-line Training"></a>On-line Training</h1><p>Revision by example is called **on-line(incremental) training<br><img src="on_line_training.png" alt></p>
-<h1 id="Derivation-of-Backpropagration-Algorithm"><a href="#Derivation-of-Backpropagration-Algorithm" class="headerlink" title="Derivation of Backpropagration Algorithm"></a>Derivation of Backpropagration Algorithm</h1><p><img src="derivation_1.png" alt><br><img src="derivation_2.png" alt><br><img src="derivation_3.png" alt><br><img src="derivation_4.png" alt><br><img src="derivation_5.png" alt><br><img src="derivation_6.png" alt></p>
-<h1 id="Batch-version-of-the-backpropagation-algorithm"><a href="#Batch-version-of-the-backpropagation-algorithm" class="headerlink" title="Batch version of the backpropagation algorithm"></a>Batch version of the backpropagation algorithm</h1><p><img src="batch_learning.png" alt><br><img src="batch_learning_1.png" alt></p>
+<h1 id="Bags"><a href="#Bags" class="headerlink" title="Bags"></a>Bags</h1><p>The set of all over type T is given by the expression bag T. Like sets and sequences, bags may be enumerated by listing their contents between Strachey bracket:【】.</p>
+<h1 id="In"><a href="#In" class="headerlink" title="In"></a>In</h1><p>If B: bag T, x: T then the predicate x in B is true if and only if, x apeears in B at least once.</p>
+<h1 id="Sub-bags"><a href="#Sub-bags" class="headerlink" title="Sub-bags"></a>Sub-bags</h1><p>If B1, B2: bag T then the predicate B1 ∈ B2 (wrong symbol) is true iff each element that occurs in B1 occur in B1 no more often than it occurs B2</p>
+<h1 id="Counting-Bags"><a href="#Counting-Bags" class="headerlink" title="Counting Bags"></a>Counting Bags</h1><p>If B: bag T, x: T then the number of times x occurs in B (a natural number) is given by the expression B # x.</p>
+<h1 id="Scaling-bags"><a href="#Scaling-bags" class="headerlink" title="Scaling bags"></a>Scaling bags</h1><p>If B: bag T, n:N, then n X ○ B is a abg which contains the same elements as B, except that every element that occurs m times in B occurs n*m times in n X ○ B.</p>
+<h1 id="Union"><a href="#Union" class="headerlink" title="Union"></a>Union</h1><p>If B1, B2: bag T, then B1 U+ B2 is bag that contains just those values that occur in either B1 or B2, except that the number of times a values X occurs in B1 U+ B2 is equal to(B1#x)+(B2#x)</p>
+<h1 id="Making-bags-out-of-sequences"><a href="#Making-bags-out-of-sequences" class="headerlink" title="Making bags out of sequences"></a>Making bags out of sequences</h1><p>If σ: Set T then items(σ) is a bag over T such that a value x occurs in item(σ) exactly as many times as it appears in σ。</p>
+<h1 id="Making-bags-out-of-sequences-1"><a href="#Making-bags-out-of-sequences-1" class="headerlink" title="Making bags out of sequences"></a>Making bags out of sequences</h1><p>If σ: seq T then items(σ) is bag over T such that a value x occurs in items(σ) exactly as many times as it appears in σ.</p>
 <script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
@@ -564,7 +475,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/CSE301/" rel="tag"><i class="fa fa-tag"></i> CSE301</a>
+            <a href="/tags/CSE307/" rel="tag"><i class="fa fa-tag"></i> CSE307</a>
           
         </div>
       
@@ -587,8 +498,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2019/10/03/lecnotes/" rel="prev" title="20190923-307">
-                20190923-307 <i class="fa fa-chevron-right"></i>
+              <a href="/2019/09/23/lecnotes/" rel="prev" title="20190923-301">
+                20190923-301 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -668,7 +579,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -745,7 +656,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Multilayer-perceptron-MLP"><span class="nav-number">1.</span> <span class="nav-text">Multilayer perceptron (MLP)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Differentiable-Activation-Functions-可微的激活函数"><span class="nav-number">2.</span> <span class="nav-text">Differentiable Activation Functions 可微的激活函数</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Sigmoid-function"><span class="nav-number">2.1.</span> <span class="nav-text">Sigmoid function</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Hyperbolic-tangent"><span class="nav-number">2.2.</span> <span class="nav-text">Hyperbolic tangent</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Multilayer-Network-Structure"><span class="nav-number">3.</span> <span class="nav-text">Multilayer Network Structure</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#A-two-layer-neural-network-implement-the-function"><span class="nav-number">3.1.</span> <span class="nav-text">A two layer neural network implement the function:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Representation-Power-of-MLP"><span class="nav-number">4.</span> <span class="nav-text">Representation Power of MLP</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Properties-concerning-the-representational-power-of-MLP"><span class="nav-number">4.1.</span> <span class="nav-text">Properties concerning the representational power of MLP:</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Backpropagation-Learning-Algorithm"><span class="nav-number">5.</span> <span class="nav-text">Backpropagation Learning Algorithm</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Algorithm-part"><span class="nav-number">5.1.</span> <span class="nav-text">Algorithm part</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Initialization"><span class="nav-number">5.1.1.</span> <span class="nav-text">Initialization</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Repeat"><span class="nav-number">5.1.2.</span> <span class="nav-text">Repeat</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#On-line-Training"><span class="nav-number">6.</span> <span class="nav-text">On-line Training</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Derivation-of-Backpropagration-Algorithm"><span class="nav-number">7.</span> <span class="nav-text">Derivation of Backpropagration Algorithm</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Batch-version-of-the-backpropagation-algorithm"><span class="nav-number">8.</span> <span class="nav-text">Batch version of the backpropagation algorithm</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition"><span class="nav-number">1.</span> <span class="nav-text">Definition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Definition1-Sequence-Length"><span class="nav-number">2.</span> <span class="nav-text">Definition1 (Sequence Length)</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Concatenation"><span class="nav-number">3.</span> <span class="nav-text">Concatenation</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Reversal"><span class="nav-number">4.</span> <span class="nav-text">Reversal</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Filtering"><span class="nav-number">5.</span> <span class="nav-text">Filtering</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#After"><span class="nav-number">6.</span> <span class="nav-text">After</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Map"><span class="nav-number">7.</span> <span class="nav-text">Map</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Decomposition"><span class="nav-number">8.</span> <span class="nav-text">Decomposition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Bags"><span class="nav-number">9.</span> <span class="nav-text">Bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#In"><span class="nav-number">10.</span> <span class="nav-text">In</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Sub-bags"><span class="nav-number">11.</span> <span class="nav-text">Sub-bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Counting-Bags"><span class="nav-number">12.</span> <span class="nav-text">Counting Bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Scaling-bags"><span class="nav-number">13.</span> <span class="nav-text">Scaling bags</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Union"><span class="nav-number">14.</span> <span class="nav-text">Union</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Making-bags-out-of-sequences"><span class="nav-number">15.</span> <span class="nav-text">Making bags out of sequences</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Making-bags-out-of-sequences-1"><span class="nav-number">16.</span> <span class="nav-text">Making bags out of sequences</span></a></li></ol></div>
             
 
           </div>
@@ -786,7 +697,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">total words: 4.8k</span>
+  <span class="post-count">total words: 7.2k</span>
 </div>
 
         

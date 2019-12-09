@@ -88,7 +88,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="CSE301,">
 
 
 
@@ -99,17 +99,31 @@
 
 
 
-<meta name="description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta name="description" content="Lecture notes of 301 Lecture 12">
+<meta name="keywords" content="CSE301">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Lingyun.Chen">
-<meta property="og:url" content="https://www.yukino424.cn/2019/10/30/20190930-307/index.html">
+<meta property="og:title" content="301-WEEK9">
+<meta property="og:url" content="https://www.yukino424.cn/2019/12/11/lecnotes/index.html">
 <meta property="og:site_name" content="Lingyun.Chen">
-<meta property="og:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta property="og:description" content="Lecture notes of 301 Lecture 12">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-30T05:37:56.139Z">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/UAU.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/Symmetric_dd.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/Singular_value_decomposition.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/Illustration_of_SVD.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/SVD_example.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/Dimensionality_reduction.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/Dimensionality_reduction_1.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/Dimensionality_reduction_2.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/PCA.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/PCA_1.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/PCA_2.png">
+<meta property="og:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/case_study.png">
+<meta property="og:updated_time" content="2019-12-09T10:40:25.478Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lingyun.Chen">
-<meta name="twitter:description" content="document.querySelectorAll(&apos;.github-emoji&apos;)           .forEach(el =&amp;gt; {             if (!el.dataset.src) { return; }             const img = document.createElement(&apos;img&apos;);             img.style">
+<meta name="twitter:title" content="301-WEEK9">
+<meta name="twitter:description" content="Lecture notes of 301 Lecture 12">
+<meta name="twitter:image" content="https://www.yukino424.cn/2019/12/11/lecnotes/UAU.png">
 
 
 
@@ -140,13 +154,13 @@
 
 
 
-  <link rel="canonical" href="https://www.yukino424.cn/2019/10/30/20190930-307/">
+  <link rel="canonical" href="https://www.yukino424.cn/2019/12/11/lecnotes/">
 
 
 
 
 
-  <title> | Lingyun.Chen</title>
+  <title>301-WEEK9 | Lingyun.Chen</title>
   
 
 
@@ -283,7 +297,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://www.yukino424.cn/2019/10/30/20190930-307/">
+    <link itemprop="mainEntityOfPage" href="https://www.yukino424.cn/2019/12/11/lecnotes/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Lingyun">
@@ -300,7 +314,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">301-WEEK9</h1>
         
 
         <div class="post-meta">
@@ -312,8 +326,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-10-30T13:37:56+08:00">
-                2019-10-30
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-12-11T12:06:52+08:00">
+                2019-12-11
               </time>
             
 
@@ -322,6 +336,28 @@
             
           </span>
 
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Lecture-Notes/" itemprop="url" rel="index">
+                    <span itemprop="name">Lecture Notes</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -344,7 +380,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  52
+                  275
                 </span>
               
 
@@ -382,7 +418,53 @@
       
 
       
-        <script>
+        <p>Lecture notes of 301 Lecture 12 </p>
+<a id="more"></a>
+
+<h1 id="Diagonal-Decomposition"><a href="#Diagonal-Decomposition" class="headerlink" title="Diagonal Decomposition"></a>Diagonal Decomposition</h1><p>Columns of U are eigenvectors of S, U的列是S的特征向量<br>Diagonal elements of A are eigenvalues of S， A的对角线元素是S的特征值<br><img src="UAU.png" alt></p>
+<h1 id="Symmetric-Diagonal-Decomposition"><a href="#Symmetric-Diagonal-Decomposition" class="headerlink" title="Symmetric Diagonal Decomposition"></a>Symmetric Diagonal Decomposition</h1><p><img src="Symmetric_dd.png" alt></p>
+<h1 id="Singular-Value-Decomposition"><a href="#Singular-Value-Decomposition" class="headerlink" title="Singular Value Decomposition"></a>Singular Value Decomposition</h1><p><img src="Singular_value_decomposition.png" alt></p>
+<h2 id="Illustratioon-of-SVD-dimensions"><a href="#Illustratioon-of-SVD-dimensions" class="headerlink" title="Illustratioon of SVD dimensions"></a>Illustratioon of SVD dimensions</h2><p><img src="Illustration_of_SVD.png" alt></p>
+<h2 id="Example"><a href="#Example" class="headerlink" title="Example"></a>Example</h2><p><img src="SVD_example.png" alt></p>
+<h1 id="Dimensionality-Reduction"><a href="#Dimensionality-Reduction" class="headerlink" title="Dimensionality Reduction"></a>Dimensionality Reduction</h1><p><img src="Dimensionality_reduction.png" alt><br><img src="Dimensionality_reduction_1.png" alt><br><img src="Dimensionality_reduction_2.png" alt></p>
+<h1 id="Principal-Component-Analysis-PCA"><a href="#Principal-Component-Analysis-PCA" class="headerlink" title="Principal Component Analysis (PCA)"></a>Principal Component Analysis (PCA)</h1><ul>
+<li>Each dimensionality recution technique finds an appropriate transformation by satisfying certain criteria (e.g., information loss, data discrimination, etc.)</li>
+<li>The goal of PCA is to reduce the dimensionality of the data while retaining as much as possible of the variation present in the dataset.</li>
+<li>Motivation<ul>
+<li>Find bases which has high variance in data</li>
+<li>Encode data with small number of bases with low MSE</li>
+</ul>
+</li>
+<li>First PC is direction of maximum variance</li>
+<li>Subsequent PCs are orthogonal to first PC and describe maximum residual variance<br><img src="PCA.png" alt><br><img src="PCA_1.png" alt><br><img src="PCA_2.png" alt></li>
+</ul>
+<h2 id="Advantage"><a href="#Advantage" class="headerlink" title="Advantage"></a>Advantage</h2><ul>
+<li>Reduce the dimension of the original data<ul>
+<li>reduce time consumption in the training process, and improve efficiency</li>
+</ul>
+</li>
+<li>Discard some information of the original data<ul>
+<li>if this information is noise</li>
+</ul>
+</li>
+</ul>
+<h2 id="Limitation"><a href="#Limitation" class="headerlink" title="Limitation"></a>Limitation</h2><ul>
+<li>Discard some information of the original data<ul>
+<li>if the discarded information is important, it is not appropriate to apply PCA</li>
+</ul>
+</li>
+<li>The meaning of the pricipal component<ul>
+<li>PC or basis may not be interpretable</li>
+</ul>
+</li>
+<li>Linear MODEL OF PCA<ul>
+<li>not suitable for nonlinear problem</li>
+</ul>
+</li>
+<li>Assume first PC has higher importance</li>
+</ul>
+<h1 id="Case-Study-Eigenface"><a href="#Case-Study-Eigenface" class="headerlink" title="Case Study: Eigenface"></a>Case Study: Eigenface</h1><p><img src="case_study.png" alt></p>
+<script>
         document.querySelectorAll('.github-emoji')
           .forEach(el => {
             if (!el.dataset.src) { return; }
@@ -423,6 +505,12 @@
     </div>
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/CSE301/" rel="tag"><i class="fa fa-tag"></i> CSE301</a>
+          
+        </div>
+      
 
       
       
@@ -432,8 +520,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/10/03/lecnotes/" rel="next" title="20190923-307">
-                <i class="fa fa-chevron-left"></i> 20190923-307
+              <a href="/2019/12/10/lecnotes/" rel="next" title="301-Lecture 11">
+                <i class="fa fa-chevron-left"></i> 301-Lecture 11
               </a>
             
           </div>
@@ -492,8 +580,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -510,7 +607,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">12</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -578,6 +675,22 @@
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Diagonal-Decomposition"><span class="nav-number">1.</span> <span class="nav-text">Diagonal Decomposition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Symmetric-Diagonal-Decomposition"><span class="nav-number">2.</span> <span class="nav-text">Symmetric Diagonal Decomposition</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Singular-Value-Decomposition"><span class="nav-number">3.</span> <span class="nav-text">Singular Value Decomposition</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Illustratioon-of-SVD-dimensions"><span class="nav-number">3.1.</span> <span class="nav-text">Illustratioon of SVD dimensions</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Example"><span class="nav-number">3.2.</span> <span class="nav-text">Example</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Dimensionality-Reduction"><span class="nav-number">4.</span> <span class="nav-text">Dimensionality Reduction</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Principal-Component-Analysis-PCA"><span class="nav-number">5.</span> <span class="nav-text">Principal Component Analysis (PCA)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Advantage"><span class="nav-number">5.1.</span> <span class="nav-text">Advantage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Limitation"><span class="nav-number">5.2.</span> <span class="nav-text">Limitation</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Case-Study-Eigenface"><span class="nav-number">6.</span> <span class="nav-text">Case Study: Eigenface</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -612,7 +725,7 @@
 
 <div class="theme-info">
   <div class="powered-by"></div>
-  <span class="post-count">total words: 4.8k</span>
+  <span class="post-count">total words: 7.2k</span>
 </div>
 
         
