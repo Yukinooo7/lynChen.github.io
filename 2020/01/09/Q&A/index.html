@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+<script>
+    (function () {
+        if ('') {
+            if (prompt('请输入文章密码') !== '') {
+                alert('密码错误！');
+                if (history.length === 1) {
+                    location.replace("https://www.yukino424.cn/"); // 这里替换成你的首页
+                } else {
+                    history.back();
+                }
+            }
+        }
+    })();
+</script>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-circle.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CSE301,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="Past year questions">
+<meta name="keywords" content="CSE301">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Final review">
+<meta property="og:url" content="https://www.yukino424.cn/2020/01/09/Q&A/index.html">
+<meta property="og:site_name" content="Lingyun.Chen">
+<meta property="og:description" content="Past year questions">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-01-08T18:25:15.204Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Final review">
+<meta name="twitter:description" content="Past year questions">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+    
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://www.yukino424.cn/2020/01/09/Q&A/">
+
+
+
+
+
+  <title>Final review | Lingyun.Chen</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <a href="https://github.com/Yukinooo7/lynChen.github.io" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewbox="0 0 250 250" style="fill:#70B7FD; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5     157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Lingyun.Chen</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">Lecture Notes</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://www.yukino424.cn/2020/01/09/Q&A/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lingyun">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/gaomu.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Lingyun.Chen">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Final review</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-01-09T02:24:05+08:00">
+                2020-01-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Final-exams/" itemprop="url" rel="index">
+                    <span itemprop="name">Final exams</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Words count in article&#58;</span>
+                
+                <span title="Words count in article">
+                  3.7k
+                </span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Reading time &asymp;</span>
+                
+                <span title="Reading time">
+                  23
+                </span>
+              
+            </div>
+          
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>Past year questions</p>
+<a id="more"></a>
+<h1 id="Question-1"><a href="#Question-1" class="headerlink" title="Question 1"></a>Question 1</h1><p>Hard limit means output is equals to a specific and the output changes immediately changes to another specific value after the value exceeds the threshold.</p>
+<h2 id="16-17"><a href="#16-17" class="headerlink" title="16-17"></a>16-17</h2><ol>
+<li>What is decision boundary in a pattern classification problem with two input variables?</li>
+</ol>
+<ul>
+<li>In a pattern classification problem with two input variables, it means that this problem has two features. Therefore, decision boundary is a line or a curve which can separate the feature space into m decision regions where m is the number of classes.</li>
+</ul>
+<ol start="2">
+<li>What is generalization of an artificial neural network model? What are the main factors that determine a network’s generalization capability?<ul>
+<li>In any real world application, the performance of Artificial Neural Networks is mostly depends upon its generalization capability. Generalization of the ANN is ability to handle unseen data. The generalization capability of the network is mostly determined by system complexity and training of the network.</li>
+</ul>
+</li>
+<li>When are the artificial neural networks a good choice for problem solving?<ul>
+<li>The reason for why learning<ul>
+<li>Human expertise does not exist (Navigating on Mars)</li>
+<li>Humans are unable to explain their expertise (Speech recognition)</li>
+<li>Solution changes in time (Forecasting stock market)</li>
+<li>Solution needs to be adapted to particular cases (User biometrics)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>The input to a singler-input neuron is 2.0, its weight is 2.3 and its bias is -3. What is the output of the neuron if it has the following transfer functions?<ul>
+<li>Hard limit</li>
+<li>Linear</li>
+<li>Sigmoid transfer functions f(x) = 1 / (1+exp(-x))</li>
+</ul>
+</li>
+<li>What would happen if the transfer functions (at the hidden and output layer) in a multi-layer perceptron would be omitted; i.e. if the activation would simply be the weighted sum of all input signals? Explain why this (simpler) activation scheme is not normally used in MLPs although it would simplify and accelerate the calculations for the back-propagation algorithm.<ul>
+<li>Compared to neural network without transfer network, the neural network with transfer network has the stronger fitting ability. Therefore, tranfer functions play an important role in non-linear separable functions so the neural network with transfer functions has the ability to fit the non-linear functions so it has a stronger ability to express.</li>
+</ul>
+</li>
+</ol>
+<h2 id="17-18"><a href="#17-18" class="headerlink" title="17-18"></a>17-18</h2><ol>
+<li><p>For a 2-input single neuron Perceptron, what is the relationship between the weight vector and the decision boundary? Assume the activation function is hard-limit as shown below, demonstrate the decision boundary when the weights are w1,1 = -1, w1,2 = 1 and athe bias is b = -1</p>
+<ul>
+<li>As we know, the normal vector define a plane: which is exactly the decision boundary. Hence, because the normal cevtor is orthogonal to the plane, then so too is the weight vector orthogonal to the decision boundary.</li>
+<li>Decision boundary: x2 - x1 -1 = 0</li>
+</ul>
+</li>
+<li><p>Briefly explain the differences between training set, validation set and test set for supervised learning.</p>
+<ul>
+<li><p>Training set: Learn a model using the training data; give the model the knowledge to classfy the data into different classes.</p>
+</li>
+<li><p>Validation set: is used for model selection</p>
+</li>
+<li><p>Testing set: for final model prediction error; Test the model using unseen test data to assess the model accuracy, usually used at the final process of the artificial neural network.</p>
+</li>
+<li><p>Training set: a set of examples used for learning: to fit the parameters of the classifier In the Multilayer Perceptron (MLP) case, we would use the training set to find the “optimal” weights with the back-prop rule</p>
+</li>
+<li><p>Validation set: a set of examples used to tune the parameters of a classifier In the MLP case, we would use the validation set to find the “optimal” number of hidden units or determine a stopping point for the back-propagation algorithm</p>
+</li>
+<li><p>Test set: a set of examples used only to assess the performance of a fully-trained classifier In the MLP case, we would use the test to estimate the error rate after we have chosen the final model (MLP size and actual weights) After assessing the final model on the test set, YOU MUST NOT tune the model any further</p>
+</li>
+</ul>
+</li>
+<li><p>Explain how to improve generalization capability of MLP by regularization.</p>
+</li>
+</ol>
+<ul>
+<li>find better learning rate and the number of hidden neurals, and better initialization weights.</li>
+</ul>
+<ol start="4">
+<li>Explain how does the momentum term for the backpropagation algorithm work?</li>
+</ol>
+<ul>
+<li>The momentum is to stabilize the weight change using a combination of the gradient decreasing term with a fraction of the previous weight change; where t is the index of the current weight change</li>
+</ul>
+<h2 id="18-19"><a href="#18-19" class="headerlink" title="18-19"></a>18-19</h2><ol>
+<li>Consider the following Boolean function; (A → B)Can this function be represented by a perceptron?<ul>
+<li>The above Boolean function is similar to operator AND which is true when both value are true so it can be represented by the same neural networks as operator AND which is a 2-input perceptron.</li>
+</ul>
+</li>
+<li>If the funtion in 1. can be represented by a perceptron, construct a perceptron network that represents the function. If not, construct a multilayer neural network that represents the function.<ul>
+<li>Construct a single-unit with 2 inputs perceptron and set w1 into 1 while w2 into 2. The threshold is set to 2. If the weighted sum is greater or equal to 2, the output is 1 otherwise the output is 0.</li>
+</ul>
+</li>
+<li>What is the generalization of a artifical neural network model? What are the main factors that determine a network’s generalization capability?<ul>
+<li>In any real world application, the performance of Artificial Neural Networks is mostly depends upon its generalization capability. Generalization of the ANN is ability to handle unseen data. The generalization capability of the network is mostly determined by system complexity and training of the network.</li>
+</ul>
+</li>
+<li>Write down the perceptron learning algorithm in detail, and clearly define any necessary mathematical notation involved.<ol>
+<li>Calculating the weighted sum from all the input neurals</li>
+<li>Campared the results with threshold and get the output </li>
+<li>Calculating the error by ej = (tj - Xj) where tj is the target output and Xj is the real output</li>
+<li>Update the weights: learning rate * ej * input</li>
+</ol>
+</li>
+</ol>
+<h1 id="Question-2"><a href="#Question-2" class="headerlink" title="Question 2"></a>Question 2</h1><h2 id="18-19-20"><a href="#18-19-20" class="headerlink" title="18-19 20"></a>18-19 20</h2><ol>
+<li>The Oja rule solves a serious problem of the Hebb rule. Explain what the problem is and how it is solved</li>
+</ol>
+<ul>
+<li>Hebb rule will be unstable and increase without boundary. As for Oja’s rule, it involves forgetting term that prevents the weights from growing without boundary. Also, Oja’s rule can converge asymptotically.</li>
+</ul>
+<ol start="2">
+<li>A student working on a French letter recognition project has segmented a large number of letter images. He then applied the images to train a neural network model. After convergence, he visualized the connection weights as shown in the following figure. Briefly describe the neural network model which the student applied and discuss the possible ways to use this result.</li>
+</ol>
+<ul>
+<li>The student applied Convolutional Neural Network (CNN) as the neural network to recognize the French letter. CNN has three layers including convolutional layer, sub-sampling  layer and fully connected layer. The student can use the trained result to label other dataset for classification. </li>
+</ul>
+<ol start="3">
+<li>What is the important role of the sigmoid function in back-propagation learning?</li>
+</ol>
+<ul>
+<li>Sigmoid tranfer function plays an important role in non-linear separable functions so the neural network with sigmoid transfer functions has the ability to fit the non-linear functions so it has a stronger ability to express.</li>
+</ul>
+<ol start="4">
+<li>Explain the ‘momentum term’ that is often included in the back-propagation learning algorithm</li>
+</ol>
+<ul>
+<li>The momentum is to stablize the weights change using a combination of the gradient decreasing term with a fraction of the previous weight change; where t is the index of the current weight change.</li>
+<li>Momentum term simply makes the following change to the weight update rule, where α is the momentum term:<ul>
+<li>If α=0, this is the same as the regular backpropagation, where the weight update is determined purely by the gradient descent</li>
+<li>If α=1, the gradient descent is completely ignored, and the update is based on the momentum, previous weight update rule</li>
+</ul>
+</li>
+</ul>
+<ol start="5">
+<li>Out of two of the following, which is better and why? Online, or offline training MLPs with back-propagation of error</li>
+</ol>
+<ul>
+<li>Explanation:<br>on-line learning, single-step learning (MLP, BP) in contrast to batch-learning changes the weights directly after the presention of a single training pattern. Therefore, the subsequent training pattern will “see” an altered network, and will train the weights according to the “new” pattern. It can happen, that the improvement of the preceding learning step is destroyed thereby.<br>This, is the reason why single-step learning can generate a residual error, and at the same time can follow a nonstationary distribution of the data from the process.<br>batch-learning is changing the weights once, the complete set of data (the batch) has been presented to the network. Therefore, all the data must be available for every learning step.<br>Theory tells, that batch-learning is working with the true gradient. Thus, the residual error is often smaller than the single-step residual error.<br>But, since one batch-learning step is only performed after a full set of training data is presented, the weight update frequency is rather slow. <h2 id="17-18-1"><a href="#17-18-1" class="headerlink" title="17-18"></a>17-18</h2>similar question will not be in exam.</li>
+</ul>
+<h2 id="16-17-1"><a href="#16-17-1" class="headerlink" title="16-17"></a>16-17</h2><ol>
+<li>The Oja rule solves a serious problem of the Hebb rule. Explain what the problem is and how it is solved</li>
+</ol>
+<ul>
+<li>Hebb rule is unstable and the weights will increase without boundary. Oja’s rule has a ‘forgetting term’ which can prevent weights from growing without boundary. Also, Oja’s rule is can converge asymptotically.<h1 id="Question-3"><a href="#Question-3" class="headerlink" title="Question 3"></a>Question 3</h1>The Hopfield associative network can act as an error correction network<h2 id="18-19-Hopfield-associative-memory-and-SOM"><a href="#18-19-Hopfield-associative-memory-and-SOM" class="headerlink" title="18-19 Hopfield associative memory and SOM"></a>18-19 Hopfield associative memory and SOM</h2></li>
+</ul>
+<ol>
+<li>First compute the weight matrix for a Hopfield network with the two memory vectors [1,-1,1,-1,1,1] and [1,1,1,-1,-1,-1] stored in it. Then confirm that both these vectors are stable states of the network</li>
+</ol>
+<ul>
+<li>The outer product W1 of [1,-1,1,-1,1,1] with itself is a 6*6 matrix</li>
+<li>The outer product W2 of [1,1,1,-1,-1,-1] with itself is a 6*6 matrix</li>
+<li>The weight matrix M is (1/6)x(W1+W2)</li>
+<li>We have to show that the original two vectors are stable states<ul>
+<li>sgn(W.[1,-1,1,-1,1,1]) = [1,-1,1,-1,1,1], so it is stable</li>
+<li>sgn(W.[1,1,1,-1,-1,-1]) = [1,1,1,-1,-1,-1], so it is stable as well</li>
+</ul>
+</li>
+</ul>
+<ol start="2">
+<li>Describe the architecture of the SOM of Kohonen network. What can the network be useful for? The self-organising process can be said to have four major components: Initialization, competition, cooperation and adaptation. Briefly describe how each component works.</li>
+</ol>
+<ul>
+<li>The architecture of the SOM: two layers of neurons with all inputs connecting to each output.</li>
+<li>SOM can be used to reduce the dimensionality</li>
+<li>Initialization: set a grid which is size and structure fixed priori</li>
+<li>Competition: Find a winner node which is closest to the center</li>
+<li>CooperationL: The winning neuron locates the center of a topological neighborhood of cooperating neurons, and the cooperative neurons are also allowed to update.</li>
+<li>Adaptation: Update the weights in relation to the inputs</li>
+</ul>
+<ol start="3">
+<li>Give an example of a task for which a Self-Organising Map network would be more appropriate than both a feed-forward network and a traditional competitive learning network.</li>
+</ol>
+<ul>
+<li>SOM is the unsupervised learning neural network so the example cannot have any labelled dataset. As for performing better than a traditional competitive learning network, only the winner neural can have a choice to update while others are inhibitory so the all the neurals in the example should be updated. As a result, the task is mining geological information in regional geochemical data so the dataset does not have any label and all the data should be updated.</li>
+</ul>
+<h2 id="17-18-2"><a href="#17-18-2" class="headerlink" title="17-18"></a>17-18</h2><ol>
+<li>What is Principal Component Analysis? which eigen value indicates the direction of largest variance? In what sense is the representation obtained from a projection onto the eigen directions corresponding to the largest eigen values optimal for data reconstruction.</li>
+</ol>
+<ul>
+<li>Principal Componenet Analysis: each dimensionality reduction technique finds an appropriate transformation by satisfying certain criteria. The first PC indicates the largest/maximum variance. The subsequent PCs are orthogonal to 1st PC and describe maximum residual variance.</li>
+</ul>
+<ol start="2">
+<li>Determine the weight matrix for an auto-associative, and discrete Hopfield Network that has four neurons and has learned the patterns:p1=[1 1 -1 -1], p2=[1 -1 1 -1]</li>
+<li>A custom has a large amount of documents on various different topics (Mythology,, Sci-fi, Fantasy) and wants to form groups of document belonging to same/similar (depending on how you are extracting features from the documents) topic. How would you solve problem for the custom(assume the documents are not labeled for you)</li>
+</ol>
+<ul>
+<li>As the requirement explained, the given dataset is not labeled and the custom wants to form groups. Therefore, I will create a Self-Organizing Map for him to deal with the dataset. SOM is a unsupervised learning network so it can deal with unlabeled dataset well and the document belonging has to form into same or similar groups so SOM is allowed the neural that near the winnter neural to update while traditional competitive learning cannot. Hence, SOM is the best way to deal with this problem.</li>
+</ul>
+<ol start="4">
+<li>In what situations you would use Kohonen SOMs over K-means clustering</li>
+</ol>
+<ul>
+<li>K-means is one of the simplest unsupervised learning algorithms that solve the well-known clustering problem. The procedure follows a simple and easy way to classify a given dataset through a certrain number of clusters and has a low computational cost.</li>
+<li>The shortcoming of k-means is that the value of K must be determined beforehand. K-means is a greedy algorithm and is hard to attain the optimum clustering results.</li>
+<li>In K-means the nodes are independent of each other, clusters are formed through centroid and cluster size.</li>
+<li>Whereas in SOM (Self Organizing Maps), the number of neurons of the output layer has a close relationship with the class number in the input stack. In this, the clusters are formed geometrically.</li>
+<li>From the performance point of view, the SOMs perform better than K-means algorithm if the number of clusters decreases. K-means is more sensitive to the noise present in the dataset compared to SOM. K-means is more sensitive to the noise present in the dataset compared to SOM.</li>
+<li>The number of cluster must be specified in advance</li>
+<li>This method is not suitable for clusters with non-convex shapes</li>
+<li>This method is sensitive to noise and outlier elements</li>
+<li>For K-means, its method is not suitable for clusters with non-convex shapes. Also, the K-means method has to set the number of cluster in advance. Finally, K-means is sensitive to noise and outlier elements. As a result, for tasks which has non-convex shapes, cannot set the number of cluster in advance and has noisy environment, SOM performs better than K-means.<h2 id="16-17-2"><a href="#16-17-2" class="headerlink" title="16-17"></a>16-17</h2></li>
+</ul>
+<ol>
+<li><h1 id="Question-4-CNN"><a href="#Question-4-CNN" class="headerlink" title="Question 4 (CNN)"></a>Question 4 (CNN)</h1></li>
+</ol>
+<h2 id="18-19-1"><a href="#18-19-1" class="headerlink" title="18-19"></a>18-19</h2><ol>
+<li>Describe the Rectified Linear Unit (ReLU), which is the most commonly applied non-linear activation function in the Convolutional Neural Network (CNN)<ul>
+<li>The forward and backward passes through an ReLU are both just a simple if statement</li>
+<li>The sigmoid activation requires computing an exponent</li>
+<li>This advantage is huge when dealing with big networks with many neurons, and can significantly reduce both training and evaluation times.</li>
+<li>Sigmoid activations are easier to saturate</li>
+<li>ReLUs only saturate when the input is less than 0</li>
+<li>For very deep networks, saturation hampers learning, and so ReLUs provide a nice workaround.</li>
+</ul>
+</li>
+<li>Explain the pooling operation in CNN, and compare two different forms of pooling, namely, max pooling and average pooling.</li>
+</ol>
+<ul>
+<li>The objective of pooling:<ul>
+<li>Transform the joint feature representation into a new, more usable one that preserves important information while discarding irrelevant detail, the crux of the matter being determine what falls in which category</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>Explain the main advantages of CNN over classical neural network models such as MLP in image classifications.</li>
+</ol>
+<ul>
+<li>CNN can work well with data that has a spatial relationship so CNN is mainly used for image classification because MLP cannot finish the same work.</li>
+<li>CNN can work well with data that has a spatial relationship and this allows the model to learn position and scale varient structure in data, which is important when working with images. As for MLP, although it can work well with the data with classes, it cannot do the same thing as CNN in image data.</li>
+</ul>
+<ol start="4">
+<li>In addition to CNN, briefly discuss two other (different) neural network and models, and explain their differences in comparison with CNN.</li>
+</ol>
+<ul>
+<li>MLPs: MLP is a supervised learning network which has three layers: input layers hidden layers and output layers. It can deal with the nonlinear separable problems. However, the processed data has to be labeled. If data is labeled, MLPs can be used for prediction.</li>
+<li>RBFs: Compared to CNN, RBF network is an unsupervised learning network which has three layers as well, however, it can only has one hidden layer while MLPs may has many according to the task’s requirement. The most important procedure of RBF is to choose the position of centers and the number of centers.</li>
+</ul>
+<h2 id="17-18-15"><a href="#17-18-15" class="headerlink" title="17-18 15"></a>17-18 15</h2><ol>
+<li>What are the benefits of using rectified linear units vs. the typical sigmoid arctivation function?</li>
+</ol>
+<ul>
+<li>Sigmoid activation function is easy to saturate while ReLU only saturate when the input is less than 0. Also, ReLU can significantly reduce both training and evaluation times.</li>
+</ul>
+<ol start="2">
+<li>Suppose we have a 4x4 matrix shown below, which represents a feature map from one layer from CNN. Define a 2x2 filter that we will run over the feature map. Let the stride be 2 for stepping over the feature map will be ((2,2)) and won’t overlap regions. What are the outputs by applying max pooling and average pooling respectively.</li>
+</ol>
+<ul>
+<li>MAX POOLING: [6 8, 3,4] </li>
+<li>Average pooling: [3 5, 2 2]</li>
+</ul>
+<ol start="3">
+<li>Consider the following issue in problem solving: A R&D team in a company is faced with solving apttern classificaiotn problem, and has decided to use an artificial neural network model. However, the researchers cannot decide between using a multilayer perceptron (MLP) and a Convolutional Neural Network (CNN). In your capacity as a consultant to this team, discuss the pros and cons of both types of the models, in the context of various factors that the team must consider before a final decision about network type can be made. Illustrate your answer with examples.</li>
+</ol>
+<h2 id="16-17-20"><a href="#16-17-20" class="headerlink" title="16-17 20"></a>16-17 20</h2><ol>
+<li>Go to check the origin one</li>
+<li>The same as 17-18 3.</li>
+</ol>
+<h1 id="Question-5"><a href="#Question-5" class="headerlink" title="Question 5"></a>Question 5</h1><h2 id="18-19-2"><a href="#18-19-2" class="headerlink" title="18-19"></a>18-19</h2><ol>
+<li>Suppose you are required to classify a tumour as benign or malignant on the basis of 9 features of the tumour, such as e.g. uniformity of cell size, clump  thickness, mitosis, etc. You have a data set of 699 case records of tumour. For each case record of a tumour, you have 9 features describing the tumour, together with correct classification of this tumour as benign or malignant. </li>
+</ol>
+<ul>
+<li>Design a neural network model for the classification task<ul>
+<li>MLPs for classfication, using 9 features as an input, one hidden layer, sigmoid transfer function if needed. Divide data set into three parts: training part, validation part and test part.</li>
+</ul>
+</li>
+<li>If the performance of your model on the training set is good, but the test set performance is significantly worse, what is the most likely problem? Discuss a simple way which may improve your results.</li>
+<li>The training data is overfitting. I should use cross-validation during training data which add a set of validation data to the training data. Also, I can use a larger MLP network to provide an adequate fit.</li>
+<li>If you need even more accurate results, what kind of approaches would you try?</li>
+<li>I may increase the number of hidden layers. More hidden layers may lead to more accurate results but also increase the border of computation.</li>
+</ul>
+<h2 id="17-18-3"><a href="#17-18-3" class="headerlink" title="17-18"></a>17-18</h2><ol>
+<li>A company wants to develop a music classification by genre using neural networks. Large amount of music songs data set has been collected and data set contains features from symbolic songs(MP3, in this case), which can be used to classify the recordings by genre. Each example is classified as classic, rock, jazz or folk song. The attributes are duration of song, tempo, toor mean square (RMS) amplitude, sampling frequency, sampling rate, dynamic range, tonality and number of digital errors</li>
+</ol>
+<ul>
+<li>Describe the neural network model for the classification task and the possible split of the original data set into the training, validating and the testing data sets.</li>
+<li>How would you normalize the data</li>
+<li>Use min-max normalization to normalize the attributes of each single song.</li>
+<li>If the performance of your model on the training set is good, but the test set performance is significantly worse, what is the most possible problem? Discuss a simple way that may improve your results.</li>
+<li>Describe and explain two different measurements for the classification performance that you would use. Discuss any possible relationships between the two measurements</li>
+<li>MSE which is used for measuring the training result.</li>
+<li>Using confusion matrix to visualize the training result</li>
+<li>Smaller MSE leads to better performance of confusion matrix.</li>
+</ul>
+<h2 id="16-17-3"><a href="#16-17-3" class="headerlink" title="16-17"></a>16-17</h2><ol>
+<li>For a medical diagnosis problem of a certain disease, there are measurements of different medical parameters that are thought to be relevant for the disease. Measurement from both patients with the disease and from healthy persons are available. The medical doctors have asked you to help them analyse and use this data to improve and simplify the diagnosis of new patients.</li>
+</ol>
+<ul>
+<li>Explain briefly what you could do with supervised learning techniques</li>
+<li>Explain briefly what you could do with unsupervised learning techniques.</li>
+</ul>
+<ol start="2">
+<li>Suppose you are required to design a neural network classification system to automatically recognize fish within predefined categories as illustracted in Figure. There are 23 classes of fishes, each with 700 images, and each image can be represented by a 100-dimensional feature vector</li>
+</ol>
+<ul>
+<li>Describe the neural network model for the classification task.</li>
+<li>If the performance of your model on the training set is good, but the test set performance is significantly worse, what is the most probable problem? And discuss a simple way that may improve your results</li>
+<li>If you needed even more accurate results, what kind of approaches would your try?</li>
+</ul>
+<script>
+        document.querySelectorAll('.github-emoji')
+          .forEach(el => {
+            if (!el.dataset.src) { return; }
+            const img = document.createElement('img');
+            img.style = 'display:none !important;';
+            img.src = el.dataset.src;
+            img.addEventListener('error', () => {
+              img.remove();
+              el.style.color = 'inherit';
+              el.style.backgroundImage = 'none';
+              el.style.background = 'none';
+            });
+            img.addEventListener('load', () => {
+              img.remove();
+            });
+            document.body.appendChild(img);
+          });
+      </script>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+    <div>
+      
+      <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------<i class="fa fa-battery-quarter"></i>  End of this note-------------</div>
+    
+</div>
+      
+    </div>
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CSE301/" rel="tag"><i class="fa fa-tag"></i> CSE301</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/12/12/lecnotes/" rel="next" title="301-WEEK9">
+                <i class="fa fa-chevron-left"></i> 301-WEEK9
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image" src="/images/gaomu.jpg" alt="Lingyun">
+            
+              <p class="site-author-name" itemprop="name">Lingyun</p>
+              <p class="site-description motion-element" itemprop="description">Fat Otaku</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://weibo.com/u/6364985874?is_all=1" target="_blank" title="Weibo">
+                      
+                        <i class="fa fa-fw fa-weibo"></i>Weibo</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://twitter.com/yukinooo72" target="_blank" title="Twitter">
+                      
+                        <i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/Yukinooo7" target="_blank" title="GitHub">
+                      
+                        <i class="fa fa-fw fa-github"></i>GitHub</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Question-1"><span class="nav-number">1.</span> <span class="nav-text">Question 1</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#16-17"><span class="nav-number">1.1.</span> <span class="nav-text">16-17</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-18"><span class="nav-number">1.2.</span> <span class="nav-text">17-18</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#18-19"><span class="nav-number">1.3.</span> <span class="nav-text">18-19</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Question-2"><span class="nav-number">2.</span> <span class="nav-text">Question 2</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#18-19-20"><span class="nav-number">2.1.</span> <span class="nav-text">18-19 20</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-18-1"><span class="nav-number">2.2.</span> <span class="nav-text">17-18</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-17-1"><span class="nav-number">2.3.</span> <span class="nav-text">16-17</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Question-3"><span class="nav-number">3.</span> <span class="nav-text">Question 3</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#18-19-Hopfield-associative-memory-and-SOM"><span class="nav-number">3.1.</span> <span class="nav-text">18-19 Hopfield associative memory and SOM</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-18-2"><span class="nav-number">3.2.</span> <span class="nav-text">17-18</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-17-2"><span class="nav-number">3.3.</span> <span class="nav-text">16-17</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Question-4-CNN"><span class="nav-number">4.</span> <span class="nav-text">Question 4 (CNN)</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#18-19-1"><span class="nav-number">4.1.</span> <span class="nav-text">18-19</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-18-15"><span class="nav-number">4.2.</span> <span class="nav-text">17-18 15</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-17-20"><span class="nav-number">4.3.</span> <span class="nav-text">16-17 20</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Question-5"><span class="nav-number">5.</span> <span class="nav-text">Question 5</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#18-19-2"><span class="nav-number">5.1.</span> <span class="nav-text">18-19</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#17-18-3"><span class="nav-number">5.2.</span> <span class="nav-text">17-18</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#16-17-3"><span class="nav-number">5.3.</span> <span class="nav-text">16-17</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lingyun</span>
+
+  
+</div>
+
+
+
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">total words: 11.2k</span>
+</div>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+  <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+  
+  
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script></body>
+</html>
